@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Εύα Λαμπρινού | Ψυχολόγος, Κλινική Σεξολόγος, Ψυχοθεραπεύτρια</title>
+    <meta name="description" content="Η Εύα Λαμπρινού είναι Ψυχολόγος, Πιστοποιημένη Κλινική Σεξολόγος και Ψυχοθεραπεύτρια (CBT, EMDR). Επιστημονικά τεκμηριωμένες παρεμβάσεις για την ψυχική υγεία.">
+    <meta name="author" content="Advon Media">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbb46ddc8c75f49d6ab38.jpg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#fdfbf7', // Off-white 
+                            beige: '#f4ede4', // New Beige color requested for boxes
+                            main2: '#e6dfd8',
+                            main3: '#c4b5b2',
+                            dark: '#5A3935',  // New Dusty Mauve / Brown (AAA compliant)
+                            accent: '#8c5952', // Lighter mauve for accents
+                            text: '#1f1615',   // Near black for main text reading
+                            subtext: '#4a3836' // Dark gray/brown for secondary text
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -10px rgba(90, 57, 53, 0.15)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fdfbf7; }
+        ::-webkit-scrollbar-thumb { background: #5A3935; border-radius: 4px; }
+        
+        .no-accents { text-transform: uppercase; }
+
+        .reveal { opacity: 0; visibility: hidden; }
+        .reveal.active { animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; visibility: visible; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+
+        .glass-nav {
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(90, 57, 53, 0.1);
+        }
+
+        #lightbox {
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+        #lightbox.active { opacity: 1; pointer-events: auto; }
+        #lightbox img { transform: scale(0.95); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        #lightbox.active img { transform: scale(1); }
+
+        /* Adjust Hero Image to not cut the head */
+        .hero-bg-img {
+            object-position: center 8%; 
+        }
+        @media (max-width: 768px) {
+            .hero-bg-img {
+                object-position: center 2% !important; 
+            }
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-light text-brand-text font-sans antialiased overflow-x-hidden w-full max-w-[100vw] selection:bg-brand-dark selection:text-white">
+
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-brand-dark text-white p-3 rounded-full shadow-lg hidden transition-opacity z-50 hover:bg-brand-accent focus:outline-none focus:ring-4 focus:ring-brand-accent/50" aria-label="Επιστροφή στην κορυφή">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav py-2" id="navbar">
+        <div class="max-w-[90rem] mx-auto px-6 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center group relative h-16 w-48">
+                <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbb46ddc8c75f49d6ab38.jpg" alt="Λογότυπο Mind Your Emotion" class="h-full w-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-105">
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                <a href="#about" class="text-sm font-semibold text-brand-dark hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md px-2 py-1">Η Ψυχολόγος</a>
+                <a href="#philosophy" class="text-sm font-semibold text-brand-dark hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md px-2 py-1">Η Φιλοσοφία μας</a>
+                <a href="#services" class="text-sm font-semibold text-brand-dark hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md px-2 py-1">Προσεγγίσεις & Υπηρεσίες</a>
+                <a href="#team" class="text-sm font-semibold text-brand-dark hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md px-2 py-1">Η Ομάδα μας</a>
+                <a href="#trust" class="text-sm font-semibold text-brand-dark hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md px-2 py-1">Γιατί να μας επιλέξετε</a>
+                <a href="#space" class="text-sm font-semibold text-brand-dark hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md px-2 py-1">Ο χώρος μας</a>
+                
+                <a href="https://www.doctoranytime.gr/d/Psychologos/lamprinou-eua?autobook=1" target="_blank" class="px-6 py-2.5 bg-brand-dark text-white rounded-md text-sm font-bold hover:bg-brand-accent focus:ring-4 focus:ring-brand-accent/50 shadow-md transition-all flex items-center gap-2 no-accents">
+                    ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
+                </a>
+            </div>
+
+            <button class="lg:hidden text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md p-1" id="mobile-menu-btn" aria-label="Μενού">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-brand-light/95 backdrop-blur-xl shadow-xl hidden flex-col items-center py-6 space-y-5 border-t border-brand-main2">
+            <a href="#about" class="text-lg font-bold text-brand-dark mobile-link">Η Ψυχολόγος</a>
+            <a href="#philosophy" class="text-lg font-bold text-brand-dark mobile-link">Η Φιλοσοφία μας</a>
+            <a href="#services" class="text-lg font-bold text-brand-dark mobile-link">Προσεγγίσεις & Υπηρεσίες</a>
+            <a href="#team" class="text-lg font-bold text-brand-dark mobile-link">Η Ομάδα μας</a>
+            <a href="#trust" class="text-lg font-bold text-brand-dark mobile-link">Γιατί να μας επιλέξετε</a>
+            <a href="#space" class="text-lg font-bold text-brand-dark mobile-link">Ο χώρος μας</a>
+            <a href="https://www.doctoranytime.gr/d/Psychologos/lamprinou-eua?autobook=1" target="_blank" class="px-8 py-3 mt-4 bg-brand-dark text-white rounded-md text-lg font-bold mobile-link no-accents">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-24 lg:pt-0 overflow-hidden bg-brand-main2">
+        <div class="absolute inset-0 w-full h-full lg:w-1/2 lg:right-0 lg:left-auto z-0">
+            <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover hero-bg-img">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-main2 via-brand-main2/80 to-transparent lg:hidden"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-main2 via-transparent to-transparent hidden lg:block"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2">
+            <div class="reveal pt-10 pb-20 lg:py-0">
+                <h1 class="text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 text-brand-dark">
+                    Mind Your Emotion
+                </h1>
+                <p class="text-xl lg:text-2xl text-brand-accent font-semibold mb-8 italic">
+                    Ένας ασφαλής χώρος κατανόησης, αποδοχής και αλλαγής.
+                </p>
+                
+                <div class="bg-white/80 backdrop-blur-md p-8 rounded-2xl shadow-soft border border-white max-w-lg">
+                    <h2 class="text-2xl font-bold text-brand-dark mb-1">Εύα Λαμπρινού</h2>
+                    <h3 class="text-brand-subtext font-medium mb-6 pb-4 border-b border-brand-main2">Ψυχολόγος, Κλινική Σεξολόγος, Ψυχοθεραπεύτρια</h3>
+                    
+                    <p class="font-bold text-brand-dark text-sm tracking-wider uppercase no-accents mb-4">ΕΞΕΙΔΙΚΕΥΣΗ ΣΕ:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-brand-text font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Γνωσιακή Συμπεριφοριστική Ψυχοθεραπεία (CBT)
+                        </li>
+                        <li class="flex items-center gap-3 text-brand-text font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Τραυματοθεραπεία EMDR
+                        </li>
+                        <li class="flex items-center gap-3 text-brand-text font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Ψυχοσεξουαλική Θεραπεία
+                        </li>
+                        <li class="flex items-center gap-3 text-brand-text font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Θεραπεία Αποδοχής και Δέσμευσης (ACT)
+                        </li>
+                        <li class="flex items-center gap-3 text-brand-text font-medium">
+                            <div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Ψυχοθεραπεία με ΛΟΑΤΚΙ+ άτομα
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-brand-light relative">
+        <div class="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <div class="lg:col-span-5 reveal order-2 lg:order-1 w-full relative">
+                <div class="rounded-3xl overflow-hidden shadow-soft border-4 border-white aspect-[4/5]">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/lamprinou-eua_01%20(1).jpg" alt="Εύα Λαμπρινού" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 reveal delay-100 order-1 lg:order-2 w-full">
+                
+                <div class="bg-brand-beige p-8 md:p-10 rounded-3xl shadow-sm border border-brand-main2/50 mb-10">
+                    <p class="text-brand-text text-lg leading-relaxed font-medium mb-6">
+                        Γεια σας είμαι η Εύα Λαμπρινού, Ψυχολόγος και Κλινική Σεξολόγος. Βρίσκεστε εδώ και ίσως αυτό να είναι ήδη ένα πρώτο βήμα προς μια νέα διαδρομή. Ένα βήμα πιο κοντά στην κατανόηση του εαυτού σας, στη δημιουργία πιο ουσιαστικών σχέσεων και στην καλλιέργεια μιας ζωής με μεγαλύτερη ισορροπία και νόημα. Πιο κοντά στη βελτίωση της επικοινωνίας με τους ανθρώπους που αγαπάτε, στην ενίσχυση της οικειότητας και της σεξουαλικής ζωής, στην ανακούφιση από το άγχος, την πίεση ή τις δυσκολίες που μπορεί να κουβαλάτε από παλαιότερες εμπειρίες. Η θεραπευτική διαδικασία προσφέρει έναν χώρο όπου μπορείτε να μιλήσετε ανοιχτά, να επεξεργαστείτε δύσκολα βιώματα και να ανακαλύψετε νέους τρόπους να σχετίζεστε με τον εαυτό σας και τους άλλους. Έναν χώρο που βασίζεται στον σεβασμό, την αποδοχή και την αυθεντική ανθρώπινη επαφή.
+                    </p>
+                    <p class="text-brand-dark font-bold text-xl lg:text-2xl font-display italic">
+                        Έναν ασφαλή χώρο κατανόησης, αποδοχής και αλλαγής.
+                    </p>
+                </div>
+
+                <h2 class="text-4xl lg:text-5xl font-display font-bold text-brand-dark mb-6">Η Ψυχολόγος</h2>
+                
+                <button onclick="openBioModal()" class="inline-flex items-center gap-2 bg-brand-dark text-white px-5 py-2.5 rounded-md font-bold text-sm hover:bg-brand-accent transition-colors focus:outline-none focus:ring-4 focus:ring-brand-accent/50 no-accents shadow-md">
+                    view experience in detail <i data-lucide="external-link" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="bio-modal" class="fixed inset-0 z-[120] bg-brand-dark/95 backdrop-blur-sm hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-8 md:p-12 transform scale-95 transition-transform duration-300" id="bio-modal-content" role="dialog" aria-modal="true">
+            <button onclick="closeBioModal()" class="absolute top-6 right-6 text-brand-subtext hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md p-1" aria-label="Κλείσιμο">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            
+            <h3 class="text-3xl font-bold text-brand-dark font-display mb-8 pb-4 border-b border-brand-main2">Το Προφίλ της Ψυχολόγου</h3>
+            
+            <div class="text-brand-text text-base leading-relaxed font-medium space-y-6">
+                <p>Η <strong>Λαμπρινού Εύα</strong> είναι Ψυχολόγος, Κλινική Σεξολόγος και Ψυχοθεραπεύτρια.</p>
+                <p>Είναι αριστούχος απόφοιτος του Τμήματος Ψυχολογίας του Παντείου Πανεπιστημίου Κοινωνικών και Πολιτικών Σπουδών και κατέχει άδεια ασκήσεως επαγγέλματος ψυχολόγου (Αρ. Πρωτ. 2338).</p>
+                <p>Διαθέτει πιστοποιημένη τετραετή εξειδίκευση στη <strong>Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</strong> από την Εταιρεία Γνωσιακών Συμπεριφοριστικών Σπουδών. Είναι πιστοποιημένη θεραπεύτρια σύμφωνα με τα κριτήρια της <strong>European Association of Cognitive and Behavioral Therapies (EABCT)</strong> και της Ελληνικής Εταιρείας Έρευνας της Συμπεριφοράς (ΕΕΕΣ).</p>
+                <p>Είναι επίσης <strong>Πιστοποιημένη Κλινική Σεξολόγος</strong> από την <strong>European Federation of Sexology (EFS)</strong> και την <strong>European Society of Sexual Medicine (ESSM)</strong>, κατόπιν γραπτών εξετάσεων που αντανακλούν εξειδίκευση στην ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες.</p>
+                
+                <p>Επιπλέον, ειδικεύεται στα ακόλουθα:</p>
+                <ul class="list-none space-y-2 pl-2">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Τραυματοθεραπεία με τη μέθοδο EMDR</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Συμβουλευτική και Ψυχοθεραπεία ΛΟΑΤΚΙ+ ατόμων</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Θεραπεία Αποδοχής και Δέσμευσης (ACT)</li>
+                </ul>
+                
+                <p>Είναι ιδρύτρια του <strong>“MindYourEmotion.gr”</strong>, το οποίο στοχεύει στην ευαισθητοποίηση γύρω από ζητήματα ψυχικής υγείας, σχέσεων και σεξουαλικής υγείας, καθώς και στην ανάπτυξη της ενσυνειδητότητας και της αυτογνωσίας στο ευρύ κοινό. Στη θεραπευτική της προσέγγιση δίνει έμφαση στην ενσυνειδητότητα (mindfulness) και στην επαφή με τις προσωπικές αξίες (values) των θεραπευομένων.</p>
+                <p>Διατηρεί ιδιωτικά γραφεία στους Αμπελόκηπους, το Περιστέρι και το Αιγάλεω, όπου μαζί με τη θεραπευτική της ομάδα παρέχουν υπηρεσίες βασισμένες σε επιστημονικά τεκμηριωμένες ψυχοθεραπευτικές μεθόδους με αποτελεσματικότητα και εγκυρότητα.</p>
+                <p>Επιπλέον, διαθέτει <strong>5ετή εμπειρία ως Εργασιακή Ψυχολόγος</strong> στην Hellas EAP, με έμφαση στην παροχή συμβουλευτικής και ψυχολογικής υποστήριξης σε εργαζόμενους πολυεθνικών και ελληνικών εταιρειών.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="philosophy" class="py-24 px-6 bg-white relative">
+        <div class="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            <div class="reveal w-full">
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-dark mb-8 leading-tight">Η φιλοσοφία πίσω από το <br><span class="text-brand-accent">“Mind Your Emotion”</span></h2>
+                
+                <div class="space-y-6 text-brand-text text-lg leading-relaxed font-medium">
+                    <p>Το “Mind Your Emotion” δημιουργήθηκε το 2020 για να εκφράσει μια βασική αρχή της ψυχοθεραπείας: ότι το συναίσθημα δεν είναι κάτι που πρέπει να αποφεύγουμε, αλλά κάτι που αξίζει να κατανοούμε. Το όνομα συμβολίζει την πράξη του να στρέφουμε την προσοχή προς τα μέσα — να παρατηρούμε τις σκέψεις και τα συναισθήματά μας με μεγαλύτερη επίγνωση και κατανόηση. Κάθε συναίσθημα, ακόμη και το πιο δύσκολο, μπορεί να αποτελέσει ένα μήνυμα για τις ανάγκες, τις εμπειρίες και τις αξίες μας.</p>
+                    <p>Η προσέγγιση αυτή επηρεάζεται από τη Γνωσιακή Συμπεριφοριστική Θεραπεία (CBT), η οποία μας βοηθά να αναγνωρίζουμε τη σχέση ανάμεσα στις σκέψεις, τα συναισθήματά και τη συμπεριφορά μας. Παράλληλα, στοιχεία από την Θεραπεία Αποδοχής και Δέσμευσης (ACT) τονίζουν τη σημασία της αποδοχής της εσωτερικής εμπειρίας και της σύνδεσης με όσα έχουν πραγματική αξία για εμάς.</p>
+                    <p>Τέλος, η θεραπευτική προσέγγιση EMDR αναδεικνύει τον τρόπο με τον οποίο παρελθοντικές εμπειρίες μπορούν να επηρεάζουν το παρόν και πώς μέσα από τη θεραπευτική διαδικασία είναι δυνατό να επανεπεξεργαστούν, μειώνοντας το συναισθηματικό τους φορτίο.</p>
+                    <p>Το “Mind Your Emotion” συμβολίζει αυτή την πορεία: την προσεκτική παρατήρηση του εσωτερικού μας κόσμου, την κατανόηση των εμπειριών μας και τη δυνατότητα αλλαγής μέσα από επίγνωση, αποδοχή και επεξεργασία.</p>
+                </div>
+            </div>
+
+            <div class="relative reveal delay-100 w-full">
+                <div class="aspect-square rounded-[3rem] overflow-hidden shadow-soft">
+                    <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc0cddc8c73e34d6c28e.jpg" alt="Πολυθρόνα Mind Your Emotion" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 bg-brand-main2/20 border-y border-brand-main2 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-dark mt-2 mb-6">Προσεγγίσεις & Υπηρεσίες</h2>
+                <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                
+                <div class="group reveal flex flex-col bg-brand-beige p-8 rounded-3xl border border-brand-main2 shadow-sm">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 border border-brand-main2 shadow-sm">
+                        <i data-lucide="brain" class="w-7 h-7 text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-4 font-display">Α. Γνωσιακή Συμπεριφοριστική Θεραπεία</h3>
+                    <div class="text-brand-subtext text-sm leading-relaxed space-y-3 font-medium">
+                        <p>Το 2018-2022 εκπαιδεύτηκα στη Γνωσιακή Συμπεριφοριστική Θεραπεία (CBT) στην <a href="https://cbt.edu.gr/erg/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark">Εταιρεία Γνωσιακών και Συμπεριφοριστικών Σπουδών (ΕΓΣΣ)</a> σε τετραετές πρόγραμμα σπουδών, σύμφωνα με τα πρότυπα της Ευρωπαϊκής Εταιρείας Γνωσιακών Συμπεριφοριστικών Ψυχοθεραπειών (European Association for Behavioural and Cognitive Therapies – EABCT). Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη Γνωσιακή-Συμπεριφοριστική επόπτρια. Έχω λάβει την πιστοποίηση της <a href="https://eabct.eu/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Association of Cognitive and Behavioral Therapies (EABCT)</a> και της <a href="https://www.eees.gr/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Ελληνικής Εταιρείας Έρευνας της Συμπεριφοράς (ΕΕΕΣ)</a>.</p>
+                        <button onclick="openServiceModal('cbt')" class="mt-4 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn">
+                            Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group reveal delay-100 flex flex-col bg-brand-beige p-8 rounded-3xl border border-brand-main2 shadow-sm">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 border border-brand-main2 shadow-sm">
+                        <i data-lucide="activity" class="w-7 h-7 text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-4 font-display">Β. Τραυματοθεραπεία EMDR</h3>
+                    <div class="text-brand-subtext text-sm leading-relaxed space-y-3 font-medium">
+                        <p>Το 2024 εκπαιδεύτηκα στην τραυματοθεραπεία με τη μέθοδο EMDR, στην <a href="https://tacthellas.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">TACT HELLAS</a>. Το πρόγραμμα εκπαίδευσης πληροί τα κριτήρια του διεθνούς επιστημονικού συλλόγου EMDRIA και αναγνωρίζεται από τον ευρωπαϊκό επιστημονικό σύλλογο <a href="https://www.emdr-europe.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark">EMDR-Εurope</a> και την <a href="https://emdr-hellas.gr" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark">EMDR-Hellas</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη EMDR επόπτρια.</p>
+                        <button onclick="openServiceModal('emdr')" class="mt-4 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn">
+                            Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group reveal delay-200 flex flex-col bg-brand-beige p-8 rounded-3xl border border-brand-main2 shadow-sm">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 border border-brand-main2 shadow-sm">
+                        <i data-lucide="heart" class="w-7 h-7 text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-4 font-display">Γ. Ψυχοσεξουαλική Θεραπεία</h3>
+                    <div class="text-brand-subtext text-sm leading-relaxed space-y-3 font-medium">
+                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το <a href="#about" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητειού Νοσοκομείου</a> και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες.</p>
+                        <button onclick="openServiceModal('sex')" class="mt-4 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn">
+                            Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group reveal flex flex-col bg-brand-beige p-8 rounded-3xl border border-brand-main2 shadow-sm">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 border border-brand-main2 shadow-sm">
+                        <i data-lucide="users" class="w-7 h-7 text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-4 font-display">Δ. ΛΟΑΤΚΙ+ Επιβεβαιωτική Προσέγγιση</h3>
+                    <div class="text-brand-subtext text-sm leading-relaxed space-y-3 font-medium">
+                        <p>Έχω συμμετάσχει στο εκπαιδευτικό πρόγραμμα της Συμβουλευτικής και Ψυχοθεραπείας με ΛΟΑΤΚΙ+ άτομα του <a href="https://orlandolgbt.gr/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Orlando LGBT+</a>. Στη δουλειά μου με ΛΟΑΤΚΙ+ άτομα δίνω ιδιαίτερη σημασία στη δημιουργία ενός ασφαλούς, συμπεριληπτικού και μη επικριτικού θεραπευτικού χώρου, όπου κάθε άνθρωπος μπορεί να μιλήσει ελεύθερα για την εμπειρία και την ταυτότητά του. Η προσέγγισή μου βασίζεται στα σύγχρονα επιστημονικά δεδομένα, στην κοινοτική ψυχολογία και σε μια διαθεματική κατανόηση της ανθρώπινης εμπειρίας.</p>
+                        <button onclick="openServiceModal('lgbtq')" class="mt-4 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn">
+                            Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group reveal delay-100 flex flex-col bg-brand-beige p-8 rounded-3xl border border-brand-main2 shadow-sm">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 border border-brand-main2 shadow-sm">
+                        <i data-lucide="shield" class="w-7 h-7 text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-4 font-display">Ε. Θεραπεία Αποδοχής και Δέσμευσης (ACT)</h3>
+                    <div class="text-brand-subtext text-sm leading-relaxed space-y-3 font-medium">
+                        <p>Το 2022 εκπαιδεύτηκα στη Θεραπεία Αποδοχής και Δέσμευσης (Acceptance and Commitment Therapy – ACT) από την <a href="https://cbt.edu.gr/erg/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Εταιρεία Γνωσιακών και Συμπεριφοριστικών Σπουδών (ΕΓΣΣ)</a>. Στο πλαίσιο αυτό έλαβα κλινική εποπτεία σε ομαδικό πλαίσιο.</p>
+                        <button onclick="openServiceModal('act')" class="mt-4 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn">
+                            Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group reveal delay-200 flex flex-col bg-brand-beige p-8 rounded-3xl border border-brand-main2 shadow-sm">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center mb-6 border border-brand-main2 shadow-sm">
+                        <i data-lucide="users" class="w-7 h-7 text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-4 font-display">ΣΤ. Θεραπεία Ζεύγους</h3>
+                    <div class="text-brand-subtext text-sm leading-relaxed space-y-3 font-medium">
+                        <p>Η θεραπεία ζεύγους προσφέρει ένα ασφαλές και υποστηρικτικό πλαίσιο όπου τα ζευγάρια μπορούν να εξερευνήσουν δυσκολίες τόσο σε επίπεδο επικοινωνίας όσο και σε σεξουαλικό επίπεδο. Η σεξουαλική επικοινωνία αποτελεί κομβικό σημείο. Μέσα από τη θεραπεία ζεύγους, τα ζευγάρια μαθαίνουν να κατανοούν τα μοτίβα επικοινωνίας τους, να εκφράζουν τις ανάγκες και τα όριά τους με ασφάλεια.</p>
+                        <button onclick="openServiceModal('couples')" class="mt-4 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn">
+                            Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="service-modal" class="fixed inset-0 z-[110] bg-brand-text/90 backdrop-blur-sm hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-8 md:p-12 transform scale-95 transition-transform duration-300" id="service-modal-content" role="dialog" aria-modal="true">
+            <button onclick="closeServiceModal()" class="absolute top-6 right-6 text-brand-subtext hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md p-1" aria-label="Κλείσιμο">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <div class="flex items-center gap-4 mb-8 border-b border-brand-main2 pb-6 mt-4">
+                <div class="w-16 h-16 bg-brand-light rounded-2xl flex items-center justify-center border border-brand-main2 shrink-0">
+                    <i id="service-modal-icon" data-lucide="brain" class="w-8 h-8 text-brand-dark"></i>
+                </div>
+                <h3 id="service-modal-title" class="text-3xl font-bold text-brand-dark font-display leading-tight"></h3>
+            </div>
+            <div id="service-modal-desc" class="text-brand-text text-base leading-relaxed space-y-5 font-medium"></div>
+        </div>
+    </div>
+
+    <div id="team-modal" class="fixed inset-0 z-[110] bg-brand-text/90 backdrop-blur-sm hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative p-8 transform scale-95 transition-transform duration-300" id="team-modal-content" role="dialog" aria-modal="true">
+            <button onclick="closeTeamModal()" class="absolute top-6 right-6 text-brand-subtext hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md p-1" aria-label="Κλείσιμο">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <div class="flex flex-col md:flex-row gap-8 items-start mt-4">
+                <div class="w-40 h-40 shrink-0 rounded-2xl overflow-hidden shadow-sm border border-brand-main2">
+                    <img id="modal-img" src="" alt="" class="w-full h-full object-cover object-top">
+                </div>
+                <div>
+                    <h3 id="modal-name" class="text-2xl font-bold text-brand-dark mb-1 font-display"></h3>
+                    <p id="modal-title" class="text-brand-accent text-sm font-bold mb-4"></p>
+                    <p id="modal-desc" class="text-brand-text text-sm leading-relaxed font-medium"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="team" class="py-24 px-6 bg-brand-light relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-dark mt-2">Η Ομάδα μας</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group reveal flex flex-col h-full bg-white p-5 rounded-3xl border border-brand-main2 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative w-full aspect-square mb-6 overflow-hidden rounded-2xl shadow-sm border border-brand-main2">
+                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/89eac5091e0963f0c0491de635c173bd82f1c61a/marketi.jpg" alt="Κωνσταντίνα Μαρκέτη" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1 font-display">Κωνσταντίνα Μαρκέτη</h3>
+                    <p class="text-brand-accent text-sm font-bold mb-3">Κλινική Ψυχολόγος MSc, Ψυχοθεραπεύτρια CBT</p>
+                    <p class="text-brand-subtext text-sm leading-relaxed line-clamp-3 mb-4 font-medium">
+                        Η Κωνσταντίνα σας υποδέχεται με ενσυναίσθηση και σεβασμό, δημιουργώντας έναν απολύτως ασφαλή χώρο για την προσωπική σας ανάπτυξη...
+                    </p>
+                    <button onclick="openTeamModal('marketi')" class="mt-auto self-start text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md py-1 flex items-center gap-1 group/btn">
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <div class="group reveal delay-100 flex flex-col h-full bg-white p-5 rounded-3xl border border-brand-main2 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative w-full aspect-square mb-6 overflow-hidden rounded-2xl shadow-sm border border-brand-main2">
+                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/89eac5091e0963f0c0491de635c173bd82f1c61a/Σταματελόπουλος%20Ιωάννης%20επαγγελματική%20φωτογραφία%20(1).jpeg" alt="Ιωάννης Σταματελόπουλος" class="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1 font-display">Ιωάννης Σταματελόπουλος</h3>
+                    <p class="text-brand-accent text-sm font-bold mb-3">Ψυχολόγος, Ψυχοθεραπευτής</p>
+                    <p class="text-brand-subtext text-sm leading-relaxed line-clamp-3 mb-4 font-medium">
+                        Ο Ιωάννης είναι ένας ζεστός και προσιτός θεραπευτής, αφιερωμένος στην ουσιαστική υποστήριξη των ανθρώπων που τον εμπιστεύονται...
+                    </p>
+                    <button onclick="openTeamModal('stamatelopoulos')" class="mt-auto self-start text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md py-1 flex items-center gap-1 group/btn">
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <div class="group reveal delay-200 flex flex-col h-full bg-white p-5 rounded-3xl border border-brand-main2 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative w-full aspect-square mb-6 overflow-hidden rounded-2xl shadow-sm border border-brand-main2">
+                        <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69a93ce4bffadf5e8e9c218c.jpg" alt="Ιωάννα Αντωνίου" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1 font-display">Ιωάννα Αντωνίου</h3>
+                    <p class="text-brand-accent text-sm font-bold mb-3">Ψυχολόγος, Ψυχοθεραπεύτρια MSc</p>
+                    <p class="text-brand-subtext text-sm leading-relaxed line-clamp-3 mb-4 font-medium">
+                        Η Ιωάννα ξεχωρίζει για την πλούσια εμπειρία της και την ολιστική, ανθρώπινη προσέγγισή της σε άτομα κάθε ηλικίας...
+                    </p>
+                    <button onclick="openTeamModal('antoniou')" class="mt-auto self-start text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md py-1 flex items-center gap-1 group/btn">
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <div class="group reveal delay-300 flex flex-col h-full bg-white p-5 rounded-3xl border border-brand-main2 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative w-full aspect-square mb-6 overflow-hidden rounded-2xl shadow-sm border border-brand-main2">
+                        <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/89eac5091e0963f0c0491de635c173bd82f1c61a/IMG_6102.jpeg" alt="Αθηνά Γονατά" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1 font-display">Αθηνά Γονατά</h3>
+                    <p class="text-brand-accent text-sm font-bold mb-3">Ψυχολόγος</p>
+                    <p class="text-brand-subtext text-sm leading-relaxed line-clamp-3 mb-4 font-medium">
+                        Η Αθηνά, αριστούχος Ψυχολόγος του ΕΚΠΑ, προσεγγίζει κάθε θεραπευόμενο με αληθινό ενδιαφέρον και βαθιά κατανόηση...
+                    </p>
+                    <button onclick="openTeamModal('gonata')" class="mt-auto self-start text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md py-1 flex items-center gap-1 group/btn">
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+                <div class="group reveal delay-400 flex flex-col h-full bg-white p-5 rounded-3xl border border-brand-main2 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative w-full aspect-square mb-6 overflow-hidden rounded-2xl shadow-sm border border-brand-main2">
+                        <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69abe0a136702f8d8f369539.jpg" alt="Γεωργία Ζαχαριάδη" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-1 font-display">Γεωργία Ζαχαριάδη</h3>
+                    <p class="text-brand-accent text-sm font-bold mb-3">Κλινική Ψυχολόγος MSc</p>
+                    <p class="text-brand-subtext text-sm leading-relaxed line-clamp-3 mb-4 font-medium">
+                        Η Γεωργία συνδυάζει την υψηλή επιστημονική κατάρτιση με μια σύγχρονη, θεραπευτική ματιά προσαρμοσμένη στις ανάγκες του σήμερα...
+                    </p>
+                    <button onclick="openTeamModal('zachariadi')" class="mt-auto self-start text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark rounded-md py-1 flex items-center gap-1 group/btn">
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="trust" class="py-24 px-6 bg-brand-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <div class="lg:col-span-7 reveal">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-10">Γιατί να μας επιλέξετε</h2>
+                
+                <div class="space-y-8">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 bg-white/10 p-3 rounded-xl text-white shrink-0"><i data-lucide="award" class="w-6 h-6"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Ευρωπαϊκές Πιστοποιήσεις</h4>
+                            <p class="text-white/90 text-sm leading-relaxed font-medium">Η Ψυχολόγος ανήκει στον περιορισμένο κύκλο ειδικών στην Ελλάδα με επίσημη πιστοποίηση Κλινικής Σεξολογίας από την Ευρωπαϊκή Ομοσπονδία Σεξολογίας (EFS) και την Ευρωπαϊκή Εταιρεία Σεξουαλικής Ιατρικής (ESSM). Κατέχει την Ευρωπαϊκή πιστοποίηση στην Γνωσιακή Συμπεριφοριστική Ψυχοθεραπείας από την European Association for Behavioural and Cognitive Therapies (EABCT).</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 bg-white/10 p-3 rounded-xl text-white shrink-0"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Εξειδικευμένος Εξοπλισμός EMDR</h4>
+                            <p class="text-white/90 text-sm leading-relaxed font-medium">Ο εξοπλισμός που χρησιμοποιείται στη θεραπεία EMDR (Eye Movement Desensitization and Reprocessing) υποστηρίζει την εφαρμογή της αμφίπλευρης διέγερσης του εγκεφάλου, μιας βασικής διαδικασίας που βοηθά στην επεξεργασία τραυματικών εμπειριών. Περιλαμβάνει συσκευές (Light Tubes, Pulsators, Headphones) που διευκολύνουν τη νευροβιολογική επεξεργασία των μνημών και μειώνει τη συναισθηματική ένταση που συνδέεται με το τραύμα. Η χρήση εξειδικευμένου εξοπλισμού επιτρέπει την ακριβή και ασφαλή εφαρμογή της θεραπείας, σύμφωνα με τα διεθνή θεραπευτικά πρωτόκολλα.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 bg-white/10 p-3 rounded-xl text-white shrink-0"><i data-lucide="briefcase" class="w-6 h-6"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Κλινικό & Οργανωσιακό υπόβαθρο</h4>
+                            <p class="text-white/90 text-sm leading-relaxed font-medium">Η ψυχολόγος έχει πραγματοποιήσει διετή κλινική πρακτική πάνω στην Γνωσιακή Συμπεριφοριστική Ψυχοθεραπεία στο Ινστιτούτο Έρευνας και Θεραπείας της Συμπεριφοράς καθώς και μονοετή κλινική πρακτική στην Ψυχοσεξουαλική Θεραπεία στο τμήμα Σεξουαλικής Υγιεινής του Αιγινητείου Νοσοκομείου. Διαθέτει 5ετή εμπειρία ως Εργασιακή Ψυχολόγος, με έμφαση στην παροχή ψυχολογικής υποστήριξης σε εργαζόμενους πολυεθνικών και ελληνικών εταιρειών και στη δημιουργία ομιλιών, παρεμβάσεων και workshops για τους εργαζόμενους.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 bg-white/10 p-3 rounded-xl text-white shrink-0"><i data-lucide="users" class="w-6 h-6"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Θεραπευτική ομάδα και χώροι</h4>
+                            <p class="text-white/90 text-sm leading-relaxed font-medium">Η θεραπευτική ομάδα δραστηριοποιείται σε τρεις περιοχές της Αττικής (Πανόρμου, Περιστέρι, Αιγάλεω), ενώ παρέχονται και διαδικτυακές συνεδρίες, διευκολύνοντας την πρόσβαση σε επιστημονικά τεκμηριωμένες υπηρεσίες ψυχικής υγείας. Τα μέλη της ομάδας είναι ψυχολόγοι με εξειδικευμένες εκπαιδεύσεις και κοινό επιστημονικό και θεραπευτικό πλαίσιο, διασφαλίζοντας μια συνεπή και ποιοτική προσέγγιση στην υποστήριξη των θεραπευομένων. Η αρχική επικοινωνία πραγματοποιείται από την Εύα Λαμπρινού, η οποία συζητά με κάθε ενδιαφερόμενο το αίτημα και τις ανάγκες του. Με βάση αυτή την πρώτη αξιολόγηση, μπορεί είτε να αναλάβει η ίδια τη θεραπευτική διαδικασία είτε να προτείνει τον καταλληλότερο θεραπευτή της ομάδας, με στόχο την καλύτερη δυνατή αντιστοίχιση θεραπευόμενου και θεραπευτή. Στόχος της διαδικασίας είναι η δημιουργία μιας θεραπευτικής σχέσης που να ανταποκρίνεται ουσιαστικά στις ανάγκες του κάθε ανθρώπου.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative reveal delay-200 hidden lg:block">
+                <div class="rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/lamprinou-eua_01.jpg" alt="Εύα Λαμπρινού" class="w-full h-auto object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="space" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl md:text-6xl font-display font-bold text-brand-dark mt-2 mb-4 lowercase tracking-wide">safe place</h2>
+                <p class="text-brand-text text-lg font-medium max-w-2xl mx-auto">τόσο για την ομάδα μας όσο και για τα άτομα που μας εμπιστεύονται</p>
+            </div>
+
+            <div class="columns-1 md:columns-3 gap-6 space-y-6">
+                <button class="w-full break-inside-avoid rounded-2xl overflow-hidden group relative reveal shadow-md bg-brand-light focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_045.jpg')" aria-label="Προβολή φωτογραφίας χώρου 1">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_045.jpg" alt="Χώρος Γραφείου 1" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </button>
+                <button class="w-full break-inside-avoid rounded-2xl overflow-hidden group relative reveal delay-100 shadow-md bg-brand-light focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_047.jpg')" aria-label="Προβολή φωτογραφίας χώρου 2">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_047.jpg" alt="Χώρος Γραφείου 2" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </button>
+                <button class="w-full break-inside-avoid rounded-2xl overflow-hidden group relative reveal delay-200 shadow-md bg-brand-light focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_050.jpg')" aria-label="Προβολή φωτογραφίας χώρου 3">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_050.jpg" alt="Χώρος Γραφείου 3" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-brand-text/95 flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()" role="dialog" aria-modal="true">
+        <button class="absolute top-6 right-6 text-white hover:text-brand-main2 transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded-md p-1" aria-label="Κλείσιμο">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default" onclick="event.stopPropagation()">
+    </div>
+
+    <section class="py-24 bg-brand-beige overflow-hidden border-t border-brand-main2">
+        <div class="max-w-7xl mx-auto px-6 mb-12 text-center reveal">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-dark mt-2 mb-4">Τι Λένε Για Εμάς</h2>
+            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-6 mx-auto mt-4 opacity-80">
+        </div>
+
+        <div class="w-full relative pb-10">
+            <div class="swiper mySwiper w-full px-6 md:px-12">
+                <div class="swiper-wrapper" id="reviews-wrapper">
+                    </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.doctoranytime.gr/d/Psychologos/lamprinou-eua" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3 bg-white border border-brand-main2 shadow-sm rounded-full text-sm font-bold text-brand-dark hover:bg-brand-main2 focus:ring-4 focus:ring-brand-dark/20 transition-all">
+                    Διαβάστε όλες τις αξιολογήσεις στο <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 ml-1" alt="Doctoranytime">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white pt-20 pb-10 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="lg:col-span-1">
+                    <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbb46ddc8c75f49d6ab38.jpg" alt="Logo" class="h-20 w-auto object-contain rounded-sm border-2 border-white mb-6 shadow-lg bg-white p-1">
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 tracking-wider no-accents">ΤΟΠΟΘΕΣΙΕΣ</h4>
+                    <ul class="space-y-6 text-white/90 text-sm font-medium">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-main3 shrink-0"></i>
+                            <div>
+                                <span class="font-bold block mb-1">Πανόρμου</span>
+                                <span class="text-white/70">Λεωφόρος Κηφισίας 87<br>Αμπελόκηποι, Αττική</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-main3 shrink-0"></i>
+                            <div>
+                                <span class="font-bold block mb-1">Περιστέρι</span>
+                                <span class="text-white/70">Θουκυδίδου 1<br>Περιστέρι, Αττική</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-main3 shrink-0"></i>
+                            <div>
+                                <span class="font-bold block mb-1">Αιγάλεω</span>
+                                <span class="text-white/70">Επικοινωνήστε για τη διεύθυνση<br>Αιγάλεω, Αττική</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 tracking-wider no-accents">ΕΠΙΚΟΙΝΩΝΙΑ</h4>
+                    <ul class="space-y-4 text-white/90 text-sm font-medium mb-8">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-main3 shrink-0"></i>
+                            <a href="mailto:mindyouremotion@gmail.com" class="hover:text-brand-main2 focus:outline-none focus:ring-2 focus:ring-white rounded-sm transition-colors break-all">mindyouremotion@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-main3 shrink-0"></i>
+                            <a href="tel:+306984909913" class="hover:text-brand-main2 focus:outline-none focus:ring-2 focus:ring-white rounded-sm transition-colors text-lg font-bold tracking-wide">698 490 9913</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/mindyouremotion.gr/?hl=el" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5 text-white"></i></a>
+                        <a href="https://www.facebook.com/mindyouremotion.gr/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-5 h-5 text-white"></i></a>
+                        <a href="https://www.linkedin.com/in/evanthia-lamprinou-27a16b1b0/?originalSubdomain=gr" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5 text-white"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 tracking-wider no-accents">ΩΡΑΡΙΟ</h4>
+                    <ul class="space-y-2 text-white/90 text-sm font-medium mb-6">
+                        <li>Δευτέρα - Παρασκευή: 9.00 - 22.00</li>
+                        <li>Σάββατο: 9.00 - 17.00</li>
+                        <li class="italic text-brand-main3 mt-2">προγραμματισμός κατόπιν επικοινωνίας</li>
+                    </ul>
+                    <a href="https://www.doctoranytime.gr/d/Psychologos/lamprinou-eua?autobook=1" target="_blank" class="inline-flex items-center justify-center bg-white text-brand-dark px-6 py-3 rounded-md font-bold hover:bg-brand-main2 focus:ring-4 focus:ring-white/50 transition-colors duration-300 w-full text-center text-sm shadow-md no-accents">
+                        ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-xs font-medium">© 2026 Mind Your Emotion - Εύα Λαμπρινού. All rights reserved.</p>
+                <p class="text-white/60 text-xs font-medium">
+                    Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-white font-bold hover:text-brand-main2 transition-colors focus:outline-none focus:ring-1 focus:ring-white rounded-sm">Advon Media</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // 1. Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Back to Top Button Logic
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 2. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // 3. Navbar Scroll Effect 
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-sm', 'py-1');
+                navbar.classList.remove('py-2');
+            } else {
+                navbar.classList.remove('shadow-sm', 'py-1');
+                navbar.classList.add('py-2');
+            }
+        });
+
+        // 4. Scroll Reveal Animations
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 5. Bio Modal Functionality (For the "view experience in detail" button)
+        const bioModal = document.getElementById('bio-modal');
+        const bioModalContent = document.getElementById('bio-modal-content');
+
+        window.openBioModal = function() {
+            bioModal.classList.remove('hidden');
+            setTimeout(() => {
+                bioModal.classList.remove('opacity-0');
+                bioModalContent.classList.remove('scale-95');
+                document.body.style.overflow = 'hidden';
+            }, 10);
+        }
+
+        window.closeBioModal = function() {
+            bioModal.classList.add('opacity-0');
+            bioModalContent.classList.add('scale-95');
+            setTimeout(() => {
+                bioModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        bioModal.addEventListener('click', (e) => {
+            if (e.target === bioModal) closeBioModal();
+        });
+
+
+        // 6. Lightbox Functionality (For The Space section)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        window.openLightbox = function(imageSrc) {
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        window.closeLightbox = function() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 400);
+        }
+
+        // 7. Services Modal Functionality
+        const serviceData = {
+            cbt: {
+                title: "Γνωσιακή Συμπεριφοριστική Θεραπεία",
+                icon: "brain",
+                content: `
+                    <p>Το 2018-2022 εκπαιδεύτηκα στη Γνωσιακή Συμπεριφοριστική Θεραπεία (CBT) στην <a href="https://cbt.edu.gr/erg/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Εταιρεία Γνωσιακών και Συμπεριφοριστικών Σπουδών (ΕΓΣΣ)</a> σε τετραετές πρόγραμμα σπουδών, σύμφωνα με τα πρότυπα της Ευρωπαϊκής Εταιρείας Γνωσιακών Συμπεριφοριστικών Ψυχοθεραπειών (European Association for Behavioural and Cognitive Therapies – EABCT). Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη Γνωσιακή-Συμπεριφοριστική επόπτρια. Έχω λάβει την πιστοποίηση της <a href="https://eabct.eu/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Association of Cognitive and Behavioral Therapies (EABCT)</a> και της <a href="https://www.eees.gr/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Ελληνικής Εταιρείας Έρευνας της Συμπεριφοράς (ΕΕΕΣ)</a>.</p>
+                    <p>Η Γνωσιακή-Συμπεριφοριστική Θεραπεία (ΓΣΘ) είναι μια επιστημονικά τεκμηριωμένη ψυχοθεραπευτική προσέγγιση που αναπτύχθηκε τη δεκαετία του 1960 από τον Aaron T. Beck. Εστιάζει στην κατανόηση και τροποποίηση δυσλειτουργικών μοτίβων σκέψης και συμπεριφοράς που επηρεάζουν τη συναισθηματική μας κατάσταση. Σύμφωνα με τη ΓΣΘ, οι σκέψεις, τα συναισθήματα και η συμπεριφορά μας είναι στενά συνδεδεμένα και αλληλοεπηρεάζονται. Ο τρόπος με τον οποίο ερμηνεύουμε μια κατάσταση μπορεί να οδηγήσει σε σκέψεις που δεν βασίζονται πάντα σε αντικειμενικά δεδομένα, αλλά σε γνωσιακά λάθη. Αυτές οι σκέψεις μπορεί να προκαλέσουν δυσάρεστα συναισθήματα και μη βοηθητικές συμπεριφορές, δημιουργώντας έναν φαύλο κύκλο που συντηρεί τη δυσκολία.</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Πώς λειτουργεί η θεραπεία:</p>
+                    <p>Στη Γνωσιακή-Συμπεριφοριστική Θεραπεία δουλεύουμε συνεργατικά για να: αναγνωρίσουμε μη βοηθητικά μοτίβα σκέψης, εντοπίσουμε γνωσιακά λάθη, αναπτύξουμε πιο ρεαλιστικούς και λειτουργικούς τρόπους σκέψης, μάθουμε νέες δεξιότητες διαχείρισης δύσκολων καταστάσεων. Οι συνεδρίες είναι δομημένες και βασίζονται σε συγκεκριμένους θεραπευτικούς στόχους. Συχνά χρησιμοποιούνται ασκήσεις και μεταξύ των συνεδριών, ώστε οι νέες δεξιότητες να εφαρμόζονται στην καθημερινότητα. Στόχος της θεραπείας είναι να κατανοήσετε καλύτερα τον εαυτό σας και να αποκτήσετε τα εργαλεία για να γίνετε σταδιακά «ο θεραπευτής του εαυτού σας».</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Σε ποιες δυσκολίες βοηθά:</p>
+                    <p>Η Γνωσιακή-Συμπεριφοριστική Θεραπεία έχει αποδειχθεί αποτελεσματική σε μια σειρά ψυχολογικών δυσκολιών, όπως: άγχος και κρίσεις πανικού, κατάθλιψη, φοβίες, ιδεοψυχαναγκαστική διαταραχή, διαταραχή μετατραυματικού στρες, προβλήματα ύπνου, δυσκολίες θυμού και διαπροσωπικών σχέσεων, πένθος και προσαρμογή σε δύσκολες καταστάσεις.</p>
+                `
+            },
+            emdr: {
+                title: "Τραυματοθεραπεία EMDR",
+                icon: "activity",
+                content: `
+                    <p>Το 2024 εκπαιδεύτηκα στην τραυματοθεραπεία με τη μέθοδο EMDR, στην <a href="https://tacthellas.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">TACT HELLAS</a>. Το πρόγραμμα εκπαίδευσης πληροί τα κριτήρια του διεθνούς επιστημονικού συλλόγου EMDRIA και αναγνωρίζεται από τον ευρωπαϊκό επιστημονικό σύλλογο <a href="https://www.emdr-europe.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">EMDR-Εurope</a> και την <a href="https://emdr-hellas.gr" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">EMDR-Hellas</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη EMDR επόπτρια.</p>
+                    <p>Η EMDR (Eye Movement Desensitization and Reprocessing – Απευαισθητοποίηση και Επαναπροσαρμογή μέσω Οφθαλμικών Κινήσεων) είναι μια σύγχρονη, επιστημονικά τεκμηριωμένη μέθοδος ψυχοθεραπείας που χρησιμοποιείται κυρίως για την επεξεργασία ψυχικού τραύματος και στρεσογόνων εμπειριών. Αναπτύχθηκε το 1987 από την ψυχολόγο Francine Shapiro και αποτελεί μια συνθετική θεραπευτική προσέγγιση, με επιρροές από διάφορα μοντέλα ψυχοθεραπείας. Η EMDR βασίζεται στην ιδέα ότι ορισμένες έντονες ή τραυματικές εμπειρίες μπορεί να αποθηκευτούν στη μνήμη με δυσλειτουργικό τρόπο, με αποτέλεσμα να συνεχίζουν να επηρεάζουν τον τρόπο που ένα άτομο σκέφτεται, αισθάνεται και αντιδρά στο παρόν. Αυτό μπορεί να εκδηλώνεται μέσα από επαναλαμβανόμενες αναμνήσεις, έντονα συναισθήματα, συμπτώματα άγχους, αρνητικές σκέψεις για τον εαυτό ή σωματική ένταση.</p>
+                    <p>Στη θεραπεία EMDR το άτομο καλείται να φέρει στο νου του δύσκολες αναμνήσεις, ενώ παράλληλα δέχεται αμφίπλευρα αισθητηριακά ερεθίσματα (όπως κινήσεις των ματιών, ήχους ή απτικά ερεθίσματα). Η διαδικασία αυτή βοηθά τον εγκέφαλο να επεξεργαστεί την εμπειρία με πιο λειτουργικό τρόπο, μειώνοντας τη συναισθηματική ένταση που τη συνοδεύει και επιτρέποντας την ανάπτυξη πιο βοηθητικών σκέψεων και αντιλήψεων. Η EMDR αναγνωρίζεται διεθνώς ως αποτελεσματική θεραπεία για το ψυχικό τραύμα και έχει εγκριθεί από σημαντικούς οργανισμούς ψυχικής υγείας, όπως ο Παγκόσμιος Οργανισμός Υγείας (WHO).</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Σε ποιες δυσκολίες μπορεί να βοηθήσει η EMDR:</p>
+                    <p>Διαταραχή Μετατραυματικού Στρες (PTSD), τραυματικές ή ιδιαίτερα στρεσογόνες εμπειρίες, αγχώδεις διαταραχές (π.χ. κρίσεις πανικού, φοβίες), κατάθλιψη, ιδεοψυχαναγκαστική διαταραχή, περιπλεγμένο πένθος, χρόνιο πόνο ή σωματικά συμπτώματα που σχετίζονται με στρες. Στόχος της θεραπείας είναι η επεξεργασία των δύσκολων εμπειριών με τρόπο που να μειώνει τη δυσφορία που προκαλούν, ώστε το άτομο να μπορεί να τις θυμάται χωρίς να κατακλύζεται από έντονα συναισθήματα και να λειτουργεί πιο ελεύθερα και ισορροπημένα στην καθημερινότητά του.</p>
+                `
+            },
+            sex: {
+                title: "Ψυχοσεξουαλική Θεραπεία",
+                icon: "heart",
+                content: `
+                    <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το <a href="#about" onclick="closeServiceModal()" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητειού Νοσοκομείου</a> και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες.</p>
+                    <p>Η ψυχοσεξουαλική θεραπεία αποτελεί μια εξειδικευμένη μορφή ψυχοθεραπείας που βοηθά τα άτομα και τα ζευγάρια να κατανοήσουν και να αντιμετωπίσουν δυσκολίες που σχετίζονται με τη σεξουαλικότητα, τη σεξουαλική επιθυμία, τη σεξουαλική λειτουργικότητα και τη σεξουαλική αλλά και ευρύτερη επικοινωνία. Στόχος της είναι η βελτίωση της ποιότητας της σεξουαλικής ζωής, η μείωση του άγχους που συχνά συνδέεται με τη σεξουαλική λειτουργία και η ενίσχυση της επικοινωνίας και της σύνδεσης μέσα στις σχέσεις.</p>
+                    <p>Μία από τις πιο αποτελεσματικές προσεγγίσεις στην αντιμετώπιση των σεξουαλικών δυσκολιών είναι η Γνωσιακή-Συμπεριφορική Θεραπεία (ΓΣΘ). Η προσέγγιση αυτή έχει αποδειχθεί αποτελεσματική σε ένα ευρύ φάσμα ψυχολογικών δυσκολιών και έχει συμβάλει σημαντικά στη διαμόρφωση θεραπευτικών στρατηγικών για πολλές σεξουαλικές δυσλειτουργίες. Συχνά οι σεξουαλικές δυσκολίες συνδέονται με άγχος, αρνητικές σκέψεις ή φόβους σχετικά με τη σεξουαλική επίδοση και την εικόνα του εαυτού. Μέσα από τη θεραπεία, τα άτομα μαθαίνουν να αναγνωρίζουν και να τροποποιούν αυτά τα μοτίβα σκέψης και συμπεριφοράς, μειώνοντας το άγχος και ενισχύοντας τη σεξουαλική λειτουργικότητα και την απόλαυση.</p>
+                    <p>Η ψυχοσεξουαλική θεραπεία είναι ιδιαίτερα αποτελεσματική σε περιπτώσεις ψυχογενών σεξουαλικών δυσλειτουργιών, δηλαδή όταν η δυσκολία σχετίζεται κυρίως με ψυχολογικούς παράγοντες όπως άγχος, άγχος απόδοσης, χαμηλή αυτοεκτίμηση ή δυσκολίες στη σχέση. Παράλληλα, μπορεί να συμβάλει σημαντικά και σε περιπτώσεις όπου υπάρχει οργανική αιτιολογία, λειτουργώντας συμπληρωματικά σε ιατρικές παρεμβάσεις και βοηθώντας το άτομο να διαχειριστεί το άγχος και τις ψυχολογικές επιπτώσεις της δυσκολίας.</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Ποιοι μπορούν να απευθυνθούν για ψυχοσεξουαλική θεραπεία:</p>
+                    <p>Η ψυχοσεξουαλική θεραπεία απευθύνεται σε άτομα ή ζευγάρια που αντιμετωπίζουν δυσκολίες όπως: μειωμένη ή απουσία σεξουαλικής επιθυμίας, δυσκολίες διέγερσης ή στύσης, πρόωρη ή καθυστερημένη εκσπερμάτιση, δυσκολία επίτευξης οργασμού, πόνο κατά τη σεξουαλική επαφή, έντονο άγχος ή φόβο σχετικά με τη σεξουαλική επίδοση, δυσκολίες οικειότητας ή επικοινωνίας μέσα στη σχέση, αρνητικές πεποιθήσεις, ενοχές ή ντροπή γύρω από τη σεξουαλικότητα. Η θεραπεία μπορεί να πραγματοποιηθεί ατομικά ή με τη συμμετοχή του ζευγαριού.</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Πώς πραγματοποιείται η θεραπευτική διαδικασία:</p>
+                    <p>Η διαδικασία ξεκινά με μια αρχική αξιολόγηση... [Στη συνέχεια η θεραπεία περιλαμβάνει] ψυχοεκπαίδευση, αναγνώριση δυσλειτουργικών σκέψεων, τεχνικές διαχείρισης άγχους, ενίσχυση επικοινωνίας και πρακτικές ασκήσεις. Σημαντικό μέρος αποτελεί και η καλλιέργεια της ενσυνειδητότητας (mindfulness)... Όλη η διαδικασία πραγματοποιείται σε ένα ασφαλές, υποστηρικτικό και εμπιστευτικό πλαίσιο.</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Μια θετική και σύγχρονη προσέγγιση στη σεξουαλικότητα:</p>
+                    <p>Η ψυχοσεξουαλική θεραπεία βασίζεται σε μια θετική και μη επικριτική προσέγγιση... δίνεται ιδιαίτερη σημασία στον σεβασμό της σεξουαλικής ποικιλομορφίας και διαφορετικότητας... Η σεξουαλικότητα έχει τη δυνατότητα να αποτελέσει πηγή προσωπικής και σχεσιακής ζωντάνιας.</p>
+                `
+            },
+            lgbtq: {
+                title: "ΛΟΑΤΚΙ+ Επιβεβαιωτική Προσέγγιση",
+                icon: "users",
+                content: `
+                    <p>Έχω συμμετάσχει στο εκπαιδευτικό πρόγραμμα της Συμβουλευτικής και Ψυχοθεραπείας με ΛΟΑΤΚΙ+ άτομα του <a href="https://orlandolgbt.gr/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Orlando LGBT+</a>. Στη δουλειά μου με ΛΟΑΤΚΙ+ άτομα δίνω ιδιαίτερη σημασία στη δημιουργία ενός ασφαλούς, συμπεριληπτικού και μη επικριτικού θεραπευτικού χώρου, όπου κάθε άνθρωπος μπορεί να μιλήσει ελεύθερα για την εμπειρία και την ταυτότητά του. Η προσέγγισή μου βασίζεται στα σύγχρονα επιστημονικά δεδομένα, στην κοινοτική ψυχολογία και σε μια διαθεματική κατανόηση της ανθρώπινης εμπειρίας.</p>
+                    <p>Έχω εκπαιδευτεί ειδικά στην παροχή υπηρεσιών ψυχικής υγείας σε ΛΟΑΤΚΙ+ άτομα... Στην ψυχοθεραπευτική διαδικασία λαμβάνω υπόψη το λεγόμενο minority stress... Η θεραπευτική δουλειά μπορεί να αφορά: ζητήματα που σχετίζονται με τον σεξουαλικό προσανατολισμό, τη διαδικασία γνωστοποίησης της ταυτότητας (coming out), ζητήματα σχέσεων, εμπειρίες διακρίσεων/bullying, θέματα οικογένειας/γονεϊκότητας, εμπειρίες τραύματος.</p>
+                    <p>Παράλληλα, θεωρώ σημαντικό μέρος της επαγγελματικής δεοντολογίας τον συνεχή αναστοχασμό... Στόχος μου είναι η ψυχοθεραπεία να αποτελεί έναν χώρο όπου η ταυτότητα και η εμπειρία κάθε ατόμου αναγνωρίζονται και γίνονται σεβαστές.</p>
+                `
+            },
+            act: {
+                title: "Θεραπεία Αποδοχής και Δέσμευσης (ACT)",
+                icon: "shield",
+                content: `
+                    <p>Το 2022 εκπαιδεύτηκα στη Θεραπεία Αποδοχής και Δέσμευσης (Acceptance and Commitment Therapy – ACT) από την <a href="https://cbt.edu.gr/erg/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Εταιρεία Γνωσιακών και Συμπεριφοριστικών Σπουδών (ΕΓΣΣ)</a>. Στο πλαίσιο αυτό έλαβα κλινική εποπτεία σε ομαδικό πλαίσιο.</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Τι είναι η Θεραπεία Αποδοχής και Δέσμευσης:</p>
+                    <p>Είναι μια σύγχρονη ψυχοθεραπευτική προσέγγιση που αναπτύχθηκε από τον Steven C. Hayes τη δεκαετία του 1980. Στόχος της είναι η ανάπτυξη ψυχολογικής ευελιξίας... Η προσέγγιση αυτή δίνει έμφαση στην αποδοχή των δύσκολων σκέψεων, στη δέσμευση σε δράσεις που ευθυγραμμίζονται με τις προσωπικές αξίες και στην καλλιέργεια δεξιοτήτων ενσυνειδητότητας (mindfulness).</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Πώς λειτουργεί η θεραπεία:</p>
+                    <p>Κατά τη διάρκεια της θεραπείας εστιάζουμε στην ανάπτυξη δεξιοτήτων που σας βοηθούν να παρατηρείτε τις σκέψεις... Η θεραπευτική διαδικασία περιλαμβάνει βιωματικές ασκήσεις, τεχνικές ενσυνειδητότητας και πρακτικές στρατηγικές.</p>
+                    <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Η φιλοσοφία της προσέγγισης:</p>
+                    <p>Στη Θεραπεία Αποδοχής και Δέσμευσης δεν προσπαθούμε να εξαλείψουμε κάθε δύσκολη σκέψη ή συναίσθημα. Αντίθετα, μαθαίνουμε να σχετιζόμαστε μαζί τους με έναν διαφορετικό τρόπο... Σε ποιες δυσκολίες μπορεί να βοηθήσει: άγχος και κρίσεις πανικού, κατάθλιψη, ιδεοψυχαναγκαστική διαταραχή, χρόνιος πόνος και χρόνιες ασθένειες, διαχείριση θυμού, διαπροσωπικές δυσκολίες.</p>
+                `
+            },
+            couples: {
+                title: "Θεραπεία Ζεύγους",
+                icon: "users",
+                content: `
+                    <p>Η θεραπεία ζεύγους προσφέρει ένα ασφαλές και υποστηρικτικό πλαίσιο όπου τα ζευγάρια μπορούν να εξερευνήσουν δυσκολίες τόσο σε επίπεδο επικοινωνίας όσο και σε σεξουαλικό επίπεδο. Η σεξουαλική επικοινωνία αποτελεί κομβικό σημείο.</p>
+                    <p>Μέσα από τη θεραπεία ζεύγους, τα ζευγάρια μαθαίνουν να κατανοούν τα μοτίβα επικοινωνίας τους, να εκφράζουν τις ανάγκες και τα όριά τους με ασφάλεια. Η θεραπεία περιλαμβάνει: Διερεύνηση της σχέσης και της επικοινωνίας, Συζήτηση σεξουαλικών θεμάτων με ασφάλεια, Ανάπτυξη δεξιοτήτων επίλυσης συγκρούσεων, Σύνδεση σεξουαλικής και συναισθηματικής οικειότητας, Ενσυνειδητότητα και παρουσία.</p>
+                    <p>Στόχος της θεραπείας ζεύγους δεν είναι μόνο η επίλυση σεξουαλικών δυσκολιών αλλά η ενίσχυση της σχέσης συνολικά.</p>
+                `
+            }
+        };
+
+        const serviceModal = document.getElementById('service-modal');
+        const serviceModalContent = document.getElementById('service-modal-content');
+
+        window.openServiceModal = function(serviceId) {
+            const service = serviceData[serviceId];
+            if (!service) return;
+
+            document.getElementById('service-modal-title').textContent = service.title;
+            document.getElementById('service-modal-desc').innerHTML = service.content;
+            
+            const iconContainer = document.getElementById('service-modal-icon');
+            iconContainer.setAttribute('data-lucide', service.icon);
+            lucide.createIcons();
+
+            serviceModal.classList.remove('hidden');
+            setTimeout(() => {
+                serviceModal.classList.remove('opacity-0');
+                serviceModalContent.classList.remove('scale-95');
+                document.body.style.overflow = 'hidden';
+            }, 10);
+        }
+
+        window.closeServiceModal = function() {
+            serviceModal.classList.add('opacity-0');
+            serviceModalContent.classList.add('scale-95');
+            setTimeout(() => {
+                serviceModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        serviceModal.addEventListener('click', (e) => {
+            if (e.target === serviceModal) closeServiceModal();
+        });
+
+
+        // 8. Team Modal Functionality
+        const teamData = {
+            marketi: {
+                name: "Κωνσταντίνα Μαρκέτη",
+                title: "Κλινική Ψυχολόγος MSc, Ψυχοθεραπεύτρια CBT",
+                img: "https://raw.githubusercontent.com/agelmet/Image-hosting-/89eac5091e0963f0c0491de635c173bd82f1c61a/marketi.jpg",
+                desc: "Η Κωνσταντίνα σας υποδέχεται με ενσυναίσθηση και σεβασμό, δημιουργώντας έναν απολύτως ασφαλή χώρο για την προσωπική σας ανάπτυξη. Με πτυχίο και μεταπτυχιακό (MSc) στην Κλινική Ψυχολογία από το University of Derby, καθώς και εξειδίκευση στη Γνωσιακή Συμπεριφορική Θεραπεία (CBT) στο Ε.Π.Ι.Ψ.Υ. (Αιγινήτειο), διαθέτει πολύτιμη κλινική εμπειρία από δημόσιες και ιδιωτικές δομές, όπως το ΚΕΘΕΑ και η ΑμΚΕ ΙΑΣΙΣ. Στην κλινική της πράξη προσεγγίζει με φροντίδα τη διαχείριση του άγχους, τις κρίσεις πανικού, τις φοβίες και την κατάθλιψη, ενώ τρέφει ιδιαίτερο ενδιαφέρον και αγάπη για τη γυναικεία ενδυνάμωση, καθοδηγώντας τις θεραπευόμενες να ανακαλύψουν την εσωτερική τους δύναμη."
+            },
+            stamatelopoulos: {
+                name: "Ιωάννης Σταματελόπουλος",
+                title: "Ψυχολόγος, Ψυχοθεραπευτής",
+                img: "https://raw.githubusercontent.com/agelmet/Image-hosting-/89eac5091e0963f0c0491de635c173bd82f1c61a/Σταματελόπουλος%20Ιωάννης%20επαγγελματική%20φωτογραφία%20(1).jpeg",
+                desc: "Ο Ιωάννης είναι ένας ζεστός και προσιτός θεραπευτής, αφιερωμένος στην ουσιαστική υποστήριξη των ανθρώπων που τον εμπιστεύονται. Έχοντας ολοκληρώσει τις σπουδές του στην Ψυχολογία στο University of East London και το μεταπτυχιακό του στην Ψυχο-Σεξολογία στο University of Central Lancashire, συνδυάζει την ακαδημαϊκή γνώση με την εξειδικευμένη εκπαίδευση στη Γνωσιακή Συμπεριφορική Ψυχοθεραπεία Ενηλίκων και την Κλινική Ύπνωση (Κ.Ε.ΨΥ.ΣΥ). Στις συνεδρίες του, προσεγγίζει με απόλυτη διακριτικότητα, αποδοχή και επιστημονική επάρκεια ζητήματα που αφορούν σεξουαλικές δυσλειτουργίες και διαταραχές άγχους, βοηθώντας τους θεραπευόμενους να χτίσουν μια πιο ήρεμη, λειτουργική και ικανοποιητική καθημερινότητα."
+            },
+            antoniou: {
+                name: "Ιωάννα Αντωνίου",
+                title: "Ψυχολόγος, Ψυχοθεραπεύτρια MSc",
+                img: "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69a93ce4bffadf5e8e9c218c.jpg",
+                desc: "Η Ιωάννα ξεχωρίζει για την πλούσια εμπειρία της και την ολιστική, ανθρώπινη προσέγγισή της σε άτομα κάθε ηλικίας. Είναι απόφοιτη Ψυχολογίας του Πανεπιστημίου Δυτικής Μακεδονίας, σπουδάστρια Λακανικής Ψυχανάλυσης στην Ακαδημία Κλινικών Σπουδών Αθήνας και εξειδικευμένη στις ψυχοσεξουαλικές διαταραχές μέσω του Ε.Π.Ι.Ψ.Υ. (με πρακτική στο Αιγινήτειο). Μέσα από την πολυετή εθελοντική της δράση σε δομές για εξαρτήσεις, αναπηρίες και τρίτη ηλικία, αλλά και τη διαρκή της επιμόρφωση σε θέματα όπως οι διατροφικές διαταραχές, έχει καλλιεργήσει μια βαθιά ευαισθησία. Παρέχει υποστηρικτικές συνεδρίες σε ενήλικες για ζητήματα σεξουαλικότητας, άγχους και κρίσεων πανικού, ενώ παράλληλα διαθέτει σημαντική εμπειρία στη δουλειά με παιδιά και εφήβους, αγκαλιάζοντας τις ανάγκες όλης της οικογένειας."
+            },
+            gonata: {
+                name: "Αθηνά Γονατά",
+                title: "Ψυχολόγος",
+                img: "https://raw.githubusercontent.com/agelmet/Image-hosting-/89eac5091e0963f0c0491de635c173bd82f1c61a/IMG_6102.jpeg",
+                desc: "Η Αθηνά, αριστούχος Ψυχολόγος του ΕΚΠΑ, προσεγγίζει κάθε θεραπευόμενο με αληθινό ενδιαφέρον και βαθιά κατανόηση. Με εκπαίδευση στη Γνωσιακή Αναλυτική Ψυχοθεραπεία και συνεχιζόμενη εξειδίκευση στη Συστημική και Οικογενειακή Ψυχοθεραπεία, διαθέτει γερές κλινικές βάσεις, έχοντας αποκομίσει εξαιρετική εμπειρία στο Ψυχιατρικό Τμήμα του Γ.Ν.Α. «Γ. Γεννηματάς». Προσφέρει έναν φιλόξενο και υποστηρικτικό χώρο σε ενήλικες, εφήβους και ζευγάρια, βοηθώντας τους να ανακαλύψουν τον εαυτό τους, να ξεπεράσουν τις προκλήσεις και να καλλιεργήσουν πιο υγιείς, αρμονικές και ουσιαστικές διαπροσωπικές σχέσεις."
+            },
+            zachariadi: {
+                name: "Γεωργία Ζαχαριάδη",
+                title: "Κλινική Ψυχολόγος MSc",
+                img: "https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69abe0a136702f8d8f369539.jpg",
+                desc: "Η Γεωργία συνδυάζει την υψηλή επιστημονική κατάρτιση με μια σύγχρονη, θεραπευτική ματιά προσαρμοσμένη στις ανάγκες του σήμερα. Είναι αδειούχος Ψυχολόγος, απόφοιτη του Πανεπιστημίου του York, με μεταπτυχιακή εξειδίκευση (MSc) στην Κλινική Ψυχολογία από το Πανεπιστήμιο της Ουτρέχτης. Η θεραπευτική της φαρέτρα είναι πλούσια, καθώς έχει εκπαιδευτεί στη Γνωσιακή-Συμπεριφορική Θεραπεία (CBT), στη Γνωσιακή Θεραπεία Βασισμένη στην Ενσυνειδητότητα (MBCT) από το Oxford Mindfulness Foundation, αλλά και στη μέθοδο EMDR για τη διαχείριση του τραύματος. Έχοντας πολύτιμη εμπειρία από τον σχεδιασμό ψυχοεκπαιδευτικών ομάδων στο εξωτερικό, εστιάζει στην ενδυνάμωση του ατόμου μέσα από τεκμηριωμένες πρακτικές. Στο πλαίσιο των συνεδριών της, υποστηρίζει ενήλικες που αντιμετωπίζουν αγχώδεις διαταραχές, κατάθλιψη, κρίσεις πανικού και μετατραυματικό στρες (PTSD), προσφέροντας έναν ασφαλή χώρο για την επεξεργασία δυσκολιών στην αυτοεκτίμηση, στις σχέσεις, καθώς και για την αντιμετώπιση ιδεοληψιών και ψυχαναγκασμών."
+            }
+        };
+
+        const teamModal = document.getElementById('team-modal');
+        const teamModalContent = document.getElementById('team-modal-content');
+
+        window.openTeamModal = function(memberId) {
+            const member = teamData[memberId];
+            if (!member) return;
+
+            document.getElementById('modal-name').textContent = member.name;
+            document.getElementById('modal-title').textContent = member.title;
+            document.getElementById('modal-desc').textContent = member.desc;
+            document.getElementById('modal-img').src = member.img;
+
+            teamModal.classList.remove('hidden');
+            setTimeout(() => {
+                teamModal.classList.remove('opacity-0');
+                teamModalContent.classList.remove('scale-95');
+                document.body.style.overflow = 'hidden';
+            }, 10);
+        }
+
+        window.closeTeamModal = function() {
+            teamModal.classList.add('opacity-0');
+            teamModalContent.classList.add('scale-95');
+            setTimeout(() => {
+                teamModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        teamModal.addEventListener('click', (e) => {
+            if (e.target === teamModal) closeTeamModal();
+        });
+
+        // Combined ESC key listener
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (lightbox.classList.contains('active')) closeLightbox();
+                if (!teamModal.classList.contains('hidden')) closeTeamModal();
+                if (!serviceModal.classList.contains('hidden')) closeServiceModal();
+                if (!bioModal.classList.contains('hidden')) closeBioModal();
+            }
+        });
+
+        // 9. Load Reviews in Swiper
+        const reviews = [
+            { score: "10.0", name: "ΒΙΟΛΕΤΑ", details: "2 αξιολογήσεις", date: "24 Φεβρουαρίου 2026", text: "Με βοήθησε να δω αρκετά πράγματα πιο καθαρά. Την ευχαριστώ πολύ." },
+            { score: "10.0", name: "Κατερίνα", details: "3 αξιολογήσεις", date: "06 Φεβρουαρίου 2026", text: "Με έκανε να νιώσω εμπιστοσύνη και ασφάλεια από την πρώτη στιγμή. Η προσέγγιση της ήταν εξαιρετική, με έκανε να αλλάξω τον τρόπο σκέψης μου." },
+            { score: "10.0", name: "ΑΡΤΕΜΗΣ", details: "7 αξιολογήσεις", date: "25 Ιανουαρίου 2026", text: "Η προσέγγισή της στα θέματά μου ήταν επαγγελματική αλλά και ανθρώπινη. Ένιωσα ασφάλεια να εκφραστώ." },
+            { score: "10.0", name: "Myriam", details: "2 αξιολογήσεις", date: "13 Ιανουαρίου 2026", text: "Ακόμα και στιγμές που το μυαλό μου 'κλείδωνε' έκανε τις καίριες ερωτήσεις και 'ξεκλείδωνε' συναισθήματα. Είναι υπέροχο." },
+            { score: "10.0", name: "Κατερίνα", details: "7 αξιολογήσεις", date: "16 Δεκεμβρίου 2025", text: "Οι συνεδρίες με την κ. Λαμπρινού ξεπέρασαν τις προσδοκίες μου. Είναι ένας άνθρωπος που πραγματικά σε ακούει και σε καθοδηγεί." },
+            { score: "10.0", name: "Fotini", details: "6 αξιολογήσεις", date: "12 Δεκεμβρίου 2025", text: "Είναι πολύ σημαντικό για μένα το ότι είναι κουήρ ενημερωμένη. Πάντα προσεγγίζει τα όσα φέρνω με πολλή ενσυναίσθηση." },
+            { score: "10.0", name: "Βασιλική", details: "2 αξιολογήσεις", date: "12 Δεκεμβρίου 2025", text: "Με τον τρόπο που λειτουργεί νιώθω πάντα ανεξάρτητη και δυνατή. Τη συνιστώ ανεπιφύλακτα ειδικά για την αντιμετώπιση τραυματικών εμπειριών!" },
+            { score: "10.0", name: "Dim", details: "2 αξιολογήσεις", date: "19 Ιουλίου 2025", text: "Με ήρεμο και ευγενικό τρόπο, δημιουργεί ένα ευχάριστο και ασφαλές περιβάλλον, όπου μπορείς να ανοιχτείς χωρίς φόβο." },
+            { score: "10.0", name: "Ρενα", details: "2 αξιολογήσεις", date: "12 Φεβρουαρίου 2025", text: "Πολύ καλή, υπεύθυνη και αξιόπιστη ψυχολόγος. Με βοήθησε να κατανοήσω από πού προέρχονται οι δυσκολίες μου." },
+            { score: "10.0", name: "ειρηνη", details: "2 αξιολογήσεις", date: "11 Φεβρουαρίου 2025", text: "Από την πρώτη συνεδρία ένιωσα εμπιστοσύνη. Μου έδινε χρόνο και χώρο να εκφραστώ, καταλάβαινε αμέσως όσα της έλεγα." }
+        ];
+
+        const swiperWrapper = document.getElementById('reviews-wrapper');
+        const starsHTML = '<i data-lucide="star" class="w-4 h-4 fill-current"></i>'.repeat(5);
+
+        reviews.forEach(review => {
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide w-[320px] md:w-[380px]';
+            slide.innerHTML = `
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-brand-main2 h-full flex flex-col justify-between mx-3 cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <div class="flex items-center gap-1 text-yellow-500 mb-1" aria-label="Αξιολόγηση ${review.score} στα 10">
+                                    ${starsHTML}
+                                </div>
+                                <span class="font-bold text-brand-dark">${review.score} / 10</span>
+                            </div>
+                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 opacity-40" alt="Doctoranytime" draggable="false">
+                        </div>
+                        <p class="text-brand-subtext text-sm mb-6 italic leading-relaxed font-medium">"${review.text}"</p>
+                    </div>
+                    <div class="border-t border-brand-main2 pt-4 mt-auto">
+                        <p class="text-xs font-bold text-brand-dark no-accents">${review.name}</p>
+                        <p class="text-xs text-brand-subtext mt-1">${review.date} • ${review.details}</p>
+                    </div>
+                </div>
+            `;
+            swiperWrapper.appendChild(slide);
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            freeMode: true,
+            grabCursor: true,
+            loop: false,
+        });
+
+    </script>
+</body>
+</html>
