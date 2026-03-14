@@ -127,14 +127,14 @@
         </div>
     </nav>
 
-    <section class="relative bg-brand-main2 pt-20 lg:pt-0 lg:min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden">
+    <section class="relative min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden bg-brand-main2 pt-[72px] lg:pt-0">
         
-        <div class="w-full h-[45vh] lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
+        <div class="w-full h-[45vh] relative lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
             <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:object-[center_8%]">
             <div class="absolute inset-0 bg-gradient-to-r from-brand-main2 via-transparent to-transparent hidden lg:block"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 mt-6 lg:mt-0 lg:my-auto pb-12 lg:pb-0">
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 flex-grow py-10 lg:py-0 items-center">
             <div class="animate-fade-in-up flex flex-col">
                 <h1 class="hidden lg:block text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 text-brand-dark">
                     Mind Your Emotion
@@ -200,7 +200,7 @@
                 </div>
                 
                 <button onclick="openBioModal()" class="inline-flex items-center gap-2 bg-brand-dark text-white px-6 py-3 rounded-md font-bold text-sm hover:bg-brand-accent transition-colors focus:outline-none focus:ring-4 focus:ring-brand-accent/50 shadow-md self-start no-accents tracking-wider">
-                    προβολή βιογραφικού <i data-lucide="external-link" class="w-4 h-4"></i>
+                    view experience in detail <i data-lucide="external-link" class="w-4 h-4"></i>
                 </button>
             </div>
         </div>
@@ -245,7 +245,7 @@
             <div class="reveal w-full">
                 <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-dark mb-8 leading-tight">Η φιλοσοφία πίσω από το <br><span class="text-brand-accent">“Mind Your Emotion”</span></h2>
                 
-                <div class="space-y-6 text-brand-text text-lg leading-relaxed font-medium">
+                <div class="text-brand-text text-lg leading-relaxed font-medium">
                     <p>Το “Mind Your Emotion” δημιουργήθηκε το 2020 για να εκφράσει μια βασική αρχή της ψυχοθεραπείας: ότι το συναίσθημα δεν είναι κάτι που πρέπει να αποφεύγουμε, αλλά κάτι που αξίζει να κατανοούμε. Το όνομα συμβολίζει την πράξη του να στρέφουμε την προσοχή προς τα μέσα — να παρατηρούμε τις σκέψεις και τα συναισθήματά μας με μεγαλύτερη επίγνωση και κατανόηση. Κάθε συναίσθημα, ακόμη και το πιο δύσκολο, μπορεί να αποτελέσει ένα μήνυμα για τις ανάγκες, τις εμπειρίες και τις αξίες μας.</p>
                 </div>
             </div>
@@ -277,7 +277,7 @@
                         <p>Το 2018-2022 εκπαιδεύτηκα στη Γνωσιακή Συμπεριφοριστική Θεραπεία (CBT) στην Εταιρεία Γνωσιακών και Συμπεριφοριστικών Σπουδών (ΕΓΣΣ) σε τετραετές πρόγραμμα σπουδών, σύμφωνα με τα πρότυπα της Ευρωπαϊκής Εταιρείας...</p>
                     </div>
                     <button onclick="openServiceModal('cbt')" class="mt-6 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn self-start">
-                        προβολή βιογραφικού <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </button>
                 </div>
 
@@ -290,7 +290,7 @@
                         <p>Το 2024 εκπαιδεύτηκα στην τραυματοθεραπεία με τη μέθοδο EMDR, στην TACT HELLAS. Το πρόγραμμα εκπαίδευσης, πληροί τα κριτήρια του διεθνούς επιστημονικού συλλόγου EMDRIA και αναγνωρίζεται από τον ευρωπαϊκό επιστημονικό σύλλογο...</p>
                     </div>
                     <button onclick="openServiceModal('emdr')" class="mt-6 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn self-start">
-                        προβολή βιογραφικού <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </button>
                 </div>
 
@@ -303,7 +303,7 @@
                         <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητειού Νοσοκομείου και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την European Federation of Sexology...</p>
                     </div>
                     <button onclick="openServiceModal('sex')" class="mt-6 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn self-start">
-                        προβολή βιογραφικού <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </button>
                 </div>
 
@@ -316,7 +316,7 @@
                         <p>Έχω συμμετάσχει στο εκπαιδευτικό πρόγραμμα της Συμβουλευτικής και Ψυχοθεραπείας με ΛΟΑΤΚΙ+ άτομα του Orlando LGBT+. Στη δουλειά μου με ΛΟΑΤΚΙ+ άτομα δίνω ιδιαίτερη σημασία στη δημιουργία ενός ασφαλούς, συμπεριληπτικού...</p>
                     </div>
                     <button onclick="openServiceModal('lgbtq')" class="mt-6 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn self-start">
-                        προβολή βιογραφικού <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </button>
                 </div>
 
@@ -329,7 +329,7 @@
                         <p>Το 2022 εκπαιδεύτηκα στη Θεραπεία Αποδοχής και Δέσμευσης (Acceptance and Commitment Therapy – ACT) από την Εταιρεία Γνωσιακών και Συμπεριφοριστικών Σπουδών (ΕΓΣΣ). Στο πλαίσιο αυτό έλαβα κλινική εποπτεία σε ομαδικό πλαίσιο.</p>
                     </div>
                     <button onclick="openServiceModal('act')" class="mt-6 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn self-start">
-                        προβολή βιογραφικού <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </button>
                 </div>
 
@@ -342,7 +342,7 @@
                         <p>Η θεραπεία ζεύγους προσφέρει ένα ασφαλές και υποστηρικτικό πλαίσιο όπου τα ζευγάρια μπορούν να εξερευνήσουν δυσκολίες τόσο σε επίπεδο επικοινωνίας όσο και σε σεξουαλικό επίπεδο. Η σεξουαλική επικοινωνία αποτελεί κομβικό σημείο.</p>
                     </div>
                     <button onclick="openServiceModal('couples')" class="mt-6 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn self-start">
-                        προβολή βιογραφικού <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                        Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </button>
                 </div>
 
