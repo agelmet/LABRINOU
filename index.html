@@ -29,8 +29,8 @@
                             beige: '#f1e7dd', 
                             main2: '#beb59f', 
                             main3: '#b8c3b8', 
-                            dark: '#0b2421',  // Dark olive green (restored)
-                            accent: '#808366', // Olive green (restored)
+                            dark: '#0b2421',  // Dark olive green
+                            accent: '#808366', // Olive green
                             text: '#424e3e',   
                             subtext: '#888a75' 
                         }
@@ -40,7 +40,7 @@
                         display: ['Syne', 'sans-serif'],
                     },
                     boxShadow: {
-                        'soft': '0 10px 30px -10px rgba(11, 36, 33, 0.15)', // Adjusted to match dark green
+                        'soft': '0 10px 30px -10px rgba(11, 36, 33, 0.15)',
                         'floating': '0 0 20px rgba(0,0,0,0.1)'
                     },
                     animation: {
@@ -82,7 +82,6 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Mobile specific adjustments */
         .hero-bg-img { object-position: center 8%; }
         @media (max-width: 768px) {
             .hero-bg-img { object-position: center top !important; }
@@ -133,7 +132,7 @@
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex flex-col justify-end lg:justify-center pt-24 lg:pt-0 overflow-hidden bg-brand-main2">
+    <section class="relative min-h-screen flex flex-col justify-end lg:justify-center pt-24 lg:pt-32 overflow-hidden bg-brand-main2">
         <div class="w-full h-[45vh] lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
             <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:object-[center_8%] hero-bg-img">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-main2 via-brand-main2/20 to-transparent lg:hidden"></div>
@@ -141,7 +140,7 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 mt-6 lg:mt-0 lg:my-auto pb-12 lg:pb-0">
-            <div class="animate-fade-in-up flex flex-col">
+            <div class="animate-fade-in-up flex flex-col lg:mt-12">
                 <h1 class="hidden lg:block text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 text-brand-dark">
                     Mind Your Emotion
                 </h1>
