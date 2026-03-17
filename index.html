@@ -29,8 +29,8 @@
                             beige: '#f1e7dd', 
                             main2: '#beb59f', 
                             main3: '#b8c3b8', 
-                            dark: '#5A3935',  
-                            accent: '#808366', 
+                            dark: '#0b2421',  // Dark olive green (restored)
+                            accent: '#808366', // Olive green (restored)
                             text: '#424e3e',   
                             subtext: '#888a75' 
                         }
@@ -40,7 +40,7 @@
                         display: ['Syne', 'sans-serif'],
                     },
                     boxShadow: {
-                        'soft': '0 10px 30px -10px rgba(90, 57, 53, 0.15)',
+                        'soft': '0 10px 30px -10px rgba(11, 36, 33, 0.15)', // Adjusted to match dark green
                         'floating': '0 0 20px rgba(0,0,0,0.1)'
                     },
                     animation: {
@@ -60,7 +60,7 @@
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1efee; }
-        ::-webkit-scrollbar-thumb { background: #5A3935; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #0b2421; border-radius: 4px; }
         
         .no-accents { text-transform: uppercase; }
 
@@ -72,7 +72,7 @@
         .glass-nav {
             background: rgba(241, 239, 238, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(90, 57, 53, 0.1);
+            border-bottom: 1px solid rgba(11, 36, 33, 0.1);
         }
 
         #lightbox { transition: opacity 0.4s ease; backdrop-filter: blur(10px); }
@@ -81,6 +81,12 @@
 
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Mobile specific adjustments */
+        .hero-bg-img { object-position: center 8%; }
+        @media (max-width: 768px) {
+            .hero-bg-img { object-position: center top !important; }
+        }
     </style>
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -127,14 +133,14 @@
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden bg-brand-main2 pt-[72px] lg:pt-0">
-        
-        <div class="w-full h-[45vh] relative lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
-            <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:object-[center_8%]">
+    <section class="relative min-h-screen flex flex-col justify-end lg:justify-center pt-24 lg:pt-0 overflow-hidden bg-brand-main2">
+        <div class="w-full h-[45vh] lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
+            <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:object-[center_8%] hero-bg-img">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-main2 via-brand-main2/20 to-transparent lg:hidden"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-brand-main2 via-transparent to-transparent hidden lg:block"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 flex-grow py-10 lg:py-0 items-center">
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 mt-6 lg:mt-0 lg:my-auto pb-12 lg:pb-0">
             <div class="animate-fade-in-up flex flex-col">
                 <h1 class="hidden lg:block text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 text-brand-dark">
                     Mind Your Emotion
@@ -240,7 +246,7 @@
         <div class="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             <div class="reveal w-full">
-                <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-dark mb-8 leading-tight">Η φιλοσοφία πίσω από το <br><span class="text-brand-accent">“Mind Your Emotion”</span></h2>
+                <h2 class="text-3xl lg:text-4xl font-display font-bold text-brand-dark mb-8 leading-tight">Η Φιλοσοφία του <br><span class="text-brand-accent">“Mind Your Emotion”</span></h2>
                 
                 <div class="text-brand-text text-lg leading-relaxed font-medium">
                     <p>Το “Mind Your Emotion” δημιουργήθηκε το 2020 για να εκφράσει μια βασική αρχή της ψυχοθεραπείας: ότι το συναίσθημα δεν είναι κάτι που πρέπει να αποφεύγουμε, αλλά κάτι που αξίζει να κατανοούμε. Το όνομα συμβολίζει την πράξη του να στρέφουμε την προσοχή προς τα μέσα — να παρατηρούμε τις σκέψεις και τα συναισθήματά μας με μεγαλύτερη επίγνωση και κατανόηση. Κάθε συναίσθημα, ακόμη και το πιο δύσκολο, μπορεί να αποτελέσει ένα μήνυμα για τις ανάγκες, τις εμπειρίες και τις αξίες μας.</p>
@@ -259,7 +265,13 @@
     <section id="services" class="py-24 bg-brand-light border-y border-brand-main2 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 mb-16 text-center reveal">
             <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-dark mt-2 mb-6">Προσεγγίσεις & Υπηρεσίες</h2>
-            <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full"></div>
+            <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full mb-8"></div>
+            
+            <div class="md:hidden flex items-center justify-center gap-2 text-brand-subtext mb-6">
+                <i data-lucide="hand" class="w-5 h-5 animate-pulse text-brand-accent"></i>
+                <span class="text-xs font-bold uppercase tracking-wider">Συρετε για περισσοτερα</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 animate-pulse text-brand-accent"></i>
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto pl-6 lg:px-6">
@@ -297,7 +309,7 @@
                     </div>
                     <h3 class="text-xl font-bold text-brand-dark mb-4 font-display">Ψυχοσεξουαλική Θεραπεία</h3>
                     <div class="text-brand-subtext text-sm leading-relaxed space-y-3 font-medium flex-grow">
-                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητειού Νοσοκομείου και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την European Federation of Sexology...</p>
+                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητείου Νοσοκομείου και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την European Federation of Sexology...</p>
                     </div>
                     <button onclick="openServiceModal('sex')" class="mt-6 inline-flex text-brand-dark font-bold text-sm hover:text-brand-accent transition-colors items-center gap-1 group/btn self-start">
                         Διαβάστε περισσότερα <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"></i>
@@ -509,7 +521,7 @@
         </div>
     </section>
 
-    <section id="space" class="py-24 px-6 bg-brand-light">
+    <section id="space" class="py-24 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl font-display font-bold text-brand-dark mb-2">Ο χώρος μας</h2>
@@ -826,7 +838,7 @@
                     title: "Ψυχοσεξουαλική Θεραπεία",
                     icon: "heart",
                     content: `
-                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητειού Νοσοκομείου και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες. Η ψυχοσεξουαλική θεραπεία αποτελεί μια εξειδικευμένη μορφή ψυχοθεραπείας που βοηθά τα άτομα και τα ζευγάρια να κατανοήσουν και να αντιμετωπίσουν δυσκολίες που σχετίζονται με τη σεξουαλικότητα, τη σεξουαλική επιθυμία, τη σεξουαλική λειτουργικότητα και τη σεξουαλική αλλά και ευρύτερη επικοινωνία. Στόχος της είναι η βελτίωση της ποιότητας της σεξουαλικής ζωής, η μείωση του άγχους που συχνά συνδέεται με τη σεξουαλική λειτουργία και η ενίσχυση της επικοινωνίας και της σύνδεσης μέσα στις σχέσεις. Μία από τις πιο αποτελεσματικές προσεγγίσεις στην αντιμετώπιση των σεξουαλικών δυσκολιών είναι η Γνωσιακή-Συμπεριφορική Θεραπεία (ΓΣΘ). Η προσέγγιση αυτή έχει αποδειχθεί αποτελεσματική σε ένα ευρύ φάσμα ψυχολογικών δυσκολιών και έχει συμβάλει σημαντικά στη διαμόρφωση θεραπευτικών στρατηγικών για πολλές σεξουαλικές δυσλειτουργίες. Συχνά οι σεξουαλικές δυσκολίες συνδέονται με άγχος, αρνητικές σκέψεις ή φόβους σχετικά με τη σεξουαλική επίδοση και την εικόνα του εαυτού. Μέσα από τη θεραπεία, τα άτομα μαθαίνουν να αναγνωρίζουν και να τροποποιούν αυτά τα μοτίβα σκέψης και συμπεριφοράς, μειώνοντας το άγχος και ενισχύοντας τη σεξουαλική λειτουργικότητα και την απόλαυση. Η ψυχοσεξουαλική θεραπεία είναι ιδιαίτερα αποτελεσματική σε περιπτώσεις ψυχογενών σεξουαλικών δυσλειτουργιών, δηλαδή όταν η δυσκολία σχετίζεται κυρίως με ψυχολογικούς παράγοντες όπως άγχος, άγχος απόδοσης, χαμηλή αυτοεκτίμηση ή δυσκολίες στη σχέση. Παράλληλα, μπορεί να συμβάλει σημαντικά και σε περιπτώσεις όπου υπάρχει οργανική αιτιολογία, λειτουργώντας συμπληρωματικά σε ιατρικές παρεμβάσεις και βοηθώντας το άτομο να διαχειριστεί το άγχος και τις ψυχολογικές επιπτώσεις της δυσκολίας.</p>
+                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητείου Νοσοκομείου και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες. Η ψυχοσεξουαλική θεραπεία αποτελεί μια εξειδικευμένη μορφή ψυχοθεραπείας που βοηθά τα άτομα και τα ζευγάρια να κατανοήσουν και να αντιμετωπίσουν δυσκολίες που σχετίζονται με τη σεξουαλικότητα, τη σεξουαλική επιθυμία, τη σεξουαλική λειτουργικότητα και τη σεξουαλική αλλά και ευρύτερη επικοινωνία. Στόχος της είναι η βελτίωση της ποιότητας της σεξουαλικής ζωής, η μείωση του άγχους που συχνά συνδέεται με τη σεξουαλική λειτουργία και η ενίσχυση της επικοινωνίας και της σύνδεσης μέσα στις σχέσεις. Μία από τις πιο αποτελεσματικές προσεγγίσεις στην αντιμετώπιση των σεξουαλικών δυσκολιών είναι η Γνωσιακή-Συμπεριφορική Θεραπεία (ΓΣΘ). Η προσέγγιση αυτή έχει αποδειχθεί αποτελεσματική σε ένα ευρύ φάσμα ψυχολογικών δυσκολιών και έχει συμβάλει σημαντικά στη διαμόρφωση θεραπευτικών στρατηγικών για πολλές σεξουαλικές δυσλειτουργίες. Συχνά οι σεξουαλικές δυσκολίες συνδέονται με άγχος, αρνητικές σκέψεις ή φόβους σχετικά με τη σεξουαλική επίδοση και την εικόνα του εαυτού. Μέσα από τη θεραπεία, τα άτομα μαθαίνουν να αναγνωρίζουν και να τροποποιούν αυτά τα μοτίβα σκέψης και συμπεριφοράς, μειώνοντας το άγχος και ενισχύοντας τη σεξουαλική λειτουργικότητα και την απόλαυση. Η ψυχοσεξουαλική θεραπεία είναι ιδιαίτερα αποτελεσματική σε περιπτώσεις ψυχογενών σεξουαλικών δυσλειτουργιών, δηλαδή όταν η δυσκολία σχετίζεται κυρίως με ψυχολογικούς παράγοντες όπως άγχος, άγχος απόδοσης, χαμηλή αυτοεκτίμηση ή δυσκολίες στη σχέση. Παράλληλα, μπορεί να συμβάλει σημαντικά και σε περιπτώσεις όπου υπάρχει οργανική αιτιολογία, λειτουργώντας συμπληρωματικά σε ιατρικές παρεμβάσεις και βοηθώντας το άτομο να διαχειριστεί το άγχος και τις ψυχολογικές επιπτώσεις της δυσκολίας.</p>
                         <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Ποιοι μπορούν να απευθυνθούν για ψυχοσεξουαλική θεραπεία</p>
                         <p>Η ψυχοσεξουαλική θεραπεία απευθύνεται σε άτομα ή ζευγάρια που αντιμετωπίζουν δυσκολίες όπως:</p>
                         <ul class="list-disc pl-5 space-y-1 mb-4">
@@ -904,11 +916,11 @@
                     content: `
                         <p>Η θεραπεία ζεύγους προσφέρει ένα ασφαλές και υποστηρικτικό πλαίσιο όπου τα ζευγάρια μπορούν να εξερευνήσουν δυσκολίες τόσο σε επίπεδο επικοινωνίας όσο και σε σεξουαλικό επίπεδο. Συχνά, τα ζητήματα στη σχέση δεν περιορίζονται μόνο στη σεξουαλική λειτουργία· προβλήματα επικοινωνίας, συγκρούσεις, δυσκολίες στην οικειότητα ή διαφορετικές προσδοκίες μπορεί να επηρεάζουν τη σύνδεση και την ικανοποίηση του ζευγαριού. Η σεξουαλική επικοινωνία αποτελεί κομβικό σημείο: οι δυσκολίες στην έκφραση επιθυμιών, ο φόβος της απόρριψης ή η ντροπή μπορούν να επηρεάσουν όχι μόνο τη σεξουαλική ζωή αλλά και τη γενικότερη επικοινωνία και οικειότητα. Μέσα από τη θεραπεία ζεύγους, τα ζευγάρια μαθαίνουν να κατανοούν τα μοτίβα επικοινωνίας τους, να εκφράζουν τις ανάγκες και τα όριά τους με ασφάλεια και να χτίζουν μια πιο αυθεντική και υποστηρικτική σύνδεση. Η θεραπεία περιλαμβάνει:</p>
                         <ul class="list-disc pl-5 space-y-1 my-4">
-                            <li>Διερεύνηση της σχέσης και της επικοινωνίας: Αναγνώριση δυσλειτουργικών μοτίβων, εκφράσεων συναισθημάτων και μη λεκτικών σημάτων που επηρεάζουν τη σύνδεση.</li>
-                            <li>Συζήτηση σεξουαλικών θεμάτων με ασφάλεια: Μαθαίνουν να εκφράζουν επιθυμίες, φαντασιώσεις και ανησυχίες χωρίς ντροπή ή φόβο.</li>
-                            <li>Ανάπτυξη δεξιοτήτων επίλυσης συγκρούσεων: Ενίσχυση της συνεργασίας, της κατανόησης και της ενσυναίσθησης μέσα στη σχέση.</li>
-                            <li>Σύνδεση σεξουαλικής και συναισθηματικής οικειότητας: Αναγνώριση της αλληλεπίδρασης μεταξύ σεξουαλικής λειτουργίας, συναισθημάτων και καθημερινής επικοινωνίας.</li>
-                            <li>Ενσυνειδητότητα και παρουσία: Τεχνικές που ενισχύουν την προσοχή στο παρόν, μειώνουν το άγχος και ενισχύουν τη σωματική και συναισθηματική σύνδεση.</li>
+                            <li><strong>Διερεύνηση της σχέσης και της επικοινωνίας:</strong> Αναγνώριση δυσλειτουργικών μοτίβων, εκφράσεων συναισθημάτων και μη λεκτικών σημάτων που επηρεάζουν τη σύνδεση.</li>
+                            <li><strong>Συζήτηση σεξουαλικών θεμάτων με ασφάλεια:</strong> Μαθαίνουν να εκφράζουν επιθυμίες, φαντασιώσεις και ανησυχίες χωρίς ντροπή ή φόβο.</li>
+                            <li><strong>Ανάπτυξη δεξιοτήτων επίλυσης συγκρούσεων:</strong> Ενίσχυση της συνεργασίας, της κατανόησης και της ενσυναίσθησης μέσα στη σχέση.</li>
+                            <li><strong>Σύνδεση σεξουαλικής και συναισθηματικής οικειότητας:</strong> Αναγνώριση της αλληλεπίδρασης μεταξύ σεξουαλικής λειτουργίας, συναισθημάτων και καθημερινής επικοινωνίας.</li>
+                            <li><strong>Ενσυνειδητότητα και παρουσία:</strong> Τεχνικές που ενισχύουν την προσοχή στο παρόν, μειώνουν το άγχος και ενισχύουν τη σωματική και συναισθηματική σύνδεση.</li>
                         </ul>
                         <p>Στόχος της θεραπείας ζεύγους δεν είναι μόνο η επίλυση σεξουαλικών δυσκολιών ή συγκρούσεων, αλλά η ενίσχυση της σχέσης συνολικά: η βελτίωση της επικοινωνίας, της οικειότητας και της αμοιβαίας κατανόησης δημιουργεί ένα πιο σταθερό και ικανοποιητικό πλαίσιο για τη σεξουαλική ζωή και τη συναισθηματική σύνδεση. Η διαδικασία πραγματοποιείται σε ένα ασφαλές και εμπιστευτικό περιβάλλον, όπου κάθε μέλος του ζευγαριού μπορεί να μιλήσει ανοιχτά για συναισθήματα, ανάγκες και δυσκολίες, ενώ η θεραπεία προσαρμόζεται στις ανάγκες και δυναμική του κάθε ζευγαριού.</p>
                     `
