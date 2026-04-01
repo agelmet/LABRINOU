@@ -29,8 +29,8 @@
                             beige: '#f1e7dd', 
                             main2: '#beb59f', 
                             main3: '#b8c3b8', 
-                            dark: '#0b2421',  // Dark olive green
-                            accent: '#808366', // Olive green
+                            dark: '#5A3935',  
+                            accent: '#808366', 
                             text: '#424e3e',   
                             subtext: '#888a75' 
                         }
@@ -40,7 +40,7 @@
                         display: ['Syne', 'sans-serif'],
                     },
                     boxShadow: {
-                        'soft': '0 10px 30px -10px rgba(11, 36, 33, 0.15)',
+                        'soft': '0 10px 30px -10px rgba(90, 57, 53, 0.15)',
                         'floating': '0 0 20px rgba(0,0,0,0.1)'
                     },
                     animation: {
@@ -60,7 +60,7 @@
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1efee; }
-        ::-webkit-scrollbar-thumb { background: #0b2421; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #5A3935; border-radius: 4px; }
         
         .no-accents { text-transform: uppercase; }
 
@@ -72,7 +72,7 @@
         .glass-nav {
             background: rgba(241, 239, 238, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(11, 36, 33, 0.1);
+            border-bottom: 1px solid rgba(90, 57, 53, 0.1);
         }
 
         #lightbox { transition: opacity 0.4s ease; backdrop-filter: blur(10px); }
@@ -82,6 +82,7 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
+        /* Mobile specific adjustments */
         .hero-bg-img { object-position: center 8%; }
         @media (max-width: 768px) {
             .hero-bg-img { object-position: center top !important; }
@@ -100,7 +101,7 @@
         <div class="max-w-[90rem] mx-auto px-6 flex justify-between items-center">
             
             <a href="#" class="flex items-center group relative h-16 w-48">
-                <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbb46ddc8c75f49d6ab38.jpg" alt="Λογότυπο Mind Your Emotion" class="h-full w-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-105">
+                <img src="https://github.com/agelmet/pap/blob/main/mindyouremotion_WEB_logo.png?raw=true" alt="Λογότυπο Mind Your Emotion" class="h-full w-full object-contain relative z-10 transition-transform duration-500 group-hover:scale-105">
             </a>
             
             <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
@@ -132,15 +133,17 @@
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex flex-col justify-end lg:justify-center pt-24 lg:pt-32 overflow-hidden bg-brand-main2">
-        <div class="w-full h-[45vh] lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
-            <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:object-[center_8%] hero-bg-img">
+    <section class="relative min-h-screen flex flex-col justify-end lg:justify-center pt-24 lg:pt-0 overflow-hidden bg-brand-main2">
+        <div class="w-full h-[45vh] relative lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
+            <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/lamprinou-eua_01%20(1).jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:hidden hero-bg-img">
+            <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover lg:object-[center_8%] hidden lg:block hero-bg-img">
+            
             <div class="absolute inset-0 bg-gradient-to-t from-brand-main2 via-brand-main2/20 to-transparent lg:hidden"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-brand-main2 via-transparent to-transparent hidden lg:block"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 mt-6 lg:mt-0 lg:my-auto pb-12 lg:pb-0">
-            <div class="animate-fade-in-up flex flex-col lg:mt-12">
+            <div class="animate-fade-in-up flex flex-col">
                 <h1 class="hidden lg:block text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 text-brand-dark">
                     Mind Your Emotion
                 </h1>
@@ -196,8 +199,11 @@
                 <h2 class="hidden lg:block text-5xl font-display font-bold text-brand-dark mb-6">Η Ψυχολόγος</h2>
 
                 <div class="bg-brand-beige p-6 md:p-10 rounded-3xl shadow-sm border border-brand-main2/50 mb-8 mt-4 lg:mt-0">
-                    <p class="text-brand-text text-lg leading-relaxed font-medium">
-                        Γεια σας είμαι η Εύα Λαμπρινού, Ψυχολόγος και Κλινική Σεξολόγος. Βρίσκεστε εδώ και ίσως αυτό να είναι ήδη ένα πρώτο βήμα προς μια νέα διαδρομή. Ένα βήμα πιο κοντά στην κατανόηση του εαυτού σας, στη δημιουργία πιο ουσιαστικών σχέσεων και στην καλλιέργεια μιας ζωής με μεγαλύτερη ισορροπία και νόημα. Πιο κοντά στη βελτίωση της επικοινωνίας με τους ανθρώπους που αγαπάτε, στην ενίσχυση της οικειότητας και της σεξουαλικής ζωής, στην ανακούφιση από το άγχος, την πίεση ή τις δυσκολίες που μπορεί να κουβαλάτε από παλαιότερες εμπειρίες. Η θεραπευτική διαδικασία προσφέρει έναν χώρο όπου μπορείτε να μιλήσετε ανοιχτά, να επεξεργαστείτε δύσκολα βιώματα και να ανακαλύψετε νέους τρόπους να σχετίζεστε με τον εαυτό σας και τους άλλους. Έναν χώρο που βασίζεται στον σεβασμό, την αποδοχή και την αυθεντική ανθρώπινη επαφή.
+                    <p class="text-brand-text text-lg leading-relaxed font-medium mb-6">
+                        Γεια σας, είμαι η Εύα Λαμπρινού, Ψυχολόγος-Ψυχοθεραπεύτρια και Κλινική Σεξολόγος. Καθώς βρίσκεστε εδώ, αυτό να είναι ήδη ένα πρώτο βήμα προς μια νέα διαδρομή. Ένα βήμα πιο κοντά στην κατανόηση του εαυτού σας, στη δημιουργία πιο ουσιαστικών σχέσεων και στην καλλιέργεια μιας ζωής με μεγαλύτερη ισορροπία και νόημα. Πιο κοντά στη βελτίωση της επικοινωνίας με τους ανθρώπους που αγαπάτε, στην ενίσχυση της οικειότητας και της σεξουαλικής ζωής, στην ανακούφιση από το άγχος, την πίεση ή τις δυσκολίες που μπορεί να κουβαλάτε από παλαιότερες εμπειρίες. Η θεραπευτική διαδικασία προσφέρει έναν χώρο όπου μπορείτε να μιλήσετε ανοιχτά, να επεξεργαστείτε δύσκολα βιώματα και να ανακαλύψετε νέους τρόπους να σχετίζεστε με τον εαυτό σας και τους άλλους. Έναν χώρο που βασίζεται στον σεβασμό, την αποδοχή και την αυθεντική ανθρώπινη επαφή.
+                    </p>
+                    <p class="text-brand-accent font-bold text-xl lg:text-2xl font-display italic">
+                        Έναν ασφαλή χώρο κατανόησης, αποδοχής και αλλαγής.
                     </p>
                 </div>
                 
@@ -218,7 +224,7 @@
             </div>
             
             <div class="overflow-y-auto p-6 md:p-12 flex-grow scrollbar-hide pt-14 md:pt-12">
-                <h3 class="text-3xl font-bold text-brand-dark font-display mb-8 pb-4 border-b border-brand-main2">Το Προφίλ της Ψυχολόγου</h3>
+                <h3 class="text-3xl font-bold text-brand-dark font-display mb-8 pb-4 border-b border-brand-main2">Γνωρίστε την Ψυχολόγο</h3>
                 
                 <div class="text-brand-text text-base leading-relaxed font-medium space-y-6">
                     <p>Η <strong>Λαμπρινού Εύα</strong> είναι Ψυχολόγος, Κλινική Σεξολόγος και Ψυχοθεραπεύτρια.</p>
@@ -226,14 +232,15 @@
                     <p>Διαθέτει πιστοποιημένη τετραετή εξειδίκευση στη <strong>Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</strong> από την Εταιρεία Γνωσιακών Συμπεριφοριστικών Σπουδών. Είναι πιστοποιημένη θεραπεύτρια σύμφωνα με τα κριτήρια της <strong>European Association of Cognitive and Behavioral Therapies (EABCT)</strong> και της Ελληνικής Εταιρείας Έρευνας της Συμπεριφοράς (ΕΕΕΣ).</p>
                     <p>Είναι επίσης <strong>Πιστοποιημένη Κλινική Σεξολόγος</strong> από την <strong>European Federation of Sexology (EFS)</strong> και την <strong>European Society of Sexual Medicine (ESSM)</strong>, κατόπιν γραπτών εξετάσεων που αντανακλούν εξειδίκευση στην ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες.</p>
                     
+                    <p>Διαθέτει πιστοποίηση στην τραυματοθεραπεία με τη μέθοδο EMDR, στην οποία εκπαιδεύτηκε στο TACT Hellas. Βρίσκεται σε διαδικασία προετοιμασίας για την Ευρωπαϊκή Πιστοποίηση EMDR.</p>
+                    
                     <p>Επιπλέον, ειδικεύεται στα ακόλουθα:</p>
                     <ul class="list-none space-y-2 pl-2">
-                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Τραυματοθεραπεία με τη μέθοδο EMDR</li>
                         <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Συμβουλευτική και Ψυχοθεραπεία ΛΟΑΤΚΙ+ ατόμων</li>
                         <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-accent"></div> Θεραπεία Αποδοχής και Δέσμευσης (ACT)</li>
                     </ul>
                     
-                    <p>Είναι ιδρύτρια του <strong>“MindYourEmotion.gr”</strong>, το οποίο στοχεύει στην ευαισθητοποίηση γύρω από ζητήματα ψυχικής υγείας, σχέσεων και σεξουαλικής υγείας, καθώς και στην ανάπτυξη της ενσυνειδητότητας και της αυτογνωσίας στο ευρύ κοινό. Στη θεραπευτική της προσέγγιση δίνει έμφαση στην ενσυνειδητότητα (mindfulness) και στην επαφή με τις προσωπικές αξίες (values) των θεραπευομένων.</p>
+                    <p>Είναι ιδρύτρια του <strong>“MindYourEmotion”</strong>, το οποίο στοχεύει στην ευαισθητοποίηση γύρω από ζητήματα ψυχικής υγείας, σχέσεων και σεξουαλικής υγείας, καθώς και στην ανάπτυξη της ενσυνειδητότητας και της αυτογνωσίας στο ευρύ κοινό. Στη θεραπευτική της προσέγγιση δίνει έμφαση στην ενσυνειδητότητα (mindfulness) και στην επαφή με τις προσωπικές αξίες (values) των θεραπευομένων.</p>
                     <p>Διατηρεί ιδιωτικά γραφεία στους Αμπελόκηπους, το Περιστέρι και το Αιγάλεω, όπου μαζί με τη θεραπευτική της ομάδα παρέχουν υπηρεσίες βασισμένες σε επιστημονικά τεκμηριωμένες ψυχοθεραπευτικές μεθόδους με αποτελεσματικότητα και εγκυρότητα.</p>
                     <p>Επιπλέον, διαθέτει <strong>5ετή εμπειρία ως Εργασιακή Ψυχολόγος</strong> στην Hellas EAP, με έμφαση στην παροχή συμβουλευτικής και ψυχολογικής υποστήριξης σε εργαζόμενους πολυεθνικών και ελληνικών εταιρειών.</p>
                 </div>
@@ -589,7 +596,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 
                 <div class="lg:col-span-1">
-                    <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbb46ddc8c75f49d6ab38.jpg" alt="Logo" class="h-20 w-auto object-contain rounded-sm border-2 border-white mb-6 shadow-lg bg-white p-1">
+                    <img src="https://github.com/agelmet/pap/blob/main/mindyouremotion_logo_white_letters-01.png?raw=true" alt="Logo" class="h-20 w-auto object-contain rounded-sm border-2 border-white mb-6 shadow-lg bg-transparent p-1">
                 </div>
 
                 <div>
@@ -633,9 +640,15 @@
                     </ul>
                     
                     <div class="flex gap-4">
-                        <a href="https://www.instagram.com/mindyouremotion.gr/?hl=el" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5 text-white"></i></a>
-                        <a href="https://www.facebook.com/mindyouremotion.gr/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-5 h-5 text-white"></i></a>
-                        <a href="https://www.linkedin.com/in/evanthia-lamprinou-27a16b1b0/?originalSubdomain=gr" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5 text-white"></i></a>
+                        <a href="https://www.instagram.com/mindyouremotion.gr/?hl=el" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/mindyouremotion.gr/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/evanthia-lamprinou-27a16b1b0/?originalSubdomain=gr" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent focus:ring-2 focus:ring-white transition-colors" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
                     </div>
                 </div>
 
@@ -666,7 +679,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // 1. Initialize Lucide Icons
             lucide.createIcons();
 
             // Back to Top Button Logic
@@ -682,7 +694,7 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // 2. Mobile Menu Toggle
+            // Mobile Menu Toggle
             const mobileBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -704,7 +716,7 @@
                 });
             });
 
-            // 3. Navbar Scroll Effect 
+            // Navbar Scroll Effect 
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -716,7 +728,7 @@
                 }
             });
 
-            // 4. Scroll Reveal Animations
+            // Scroll Reveal Animations
             const observerOptions = { root: null, rootMargin: '50px', threshold: 0.05 };
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -729,7 +741,7 @@
 
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-            // 5. Bio Modal Functionality
+            // Bio Modal Functionality
             const bioModal = document.getElementById('bio-modal');
             const bioModalContent = document.getElementById('bio-modal-content');
 
@@ -757,7 +769,7 @@
                 if (e.target === bioModal) closeBioModal();
             });
 
-            // 6. Lightbox Functionality
+            // Lightbox Functionality
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
 
@@ -781,7 +793,7 @@
                 }, 400);
             }
 
-            // 7. Services Modal Functionality
+            // Services Modal Functionality
             const serviceIds = ['cbt', 'emdr', 'sex', 'lgbtq', 'act', 'couples'];
             let currentServiceIndex = 0;
 
@@ -837,7 +849,7 @@
                     title: "Ψυχοσεξουαλική Θεραπεία",
                     icon: "heart",
                     content: `
-                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητείου Νοσοκομείου και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες. Η ψυχοσεξουαλική θεραπεία αποτελεί μια εξειδικευμένη μορφή ψυχοθεραπείας που βοηθά τα άτομα και τα ζευγάρια να κατανοήσουν και να αντιμετωπίσουν δυσκολίες που σχετίζονται με τη σεξουαλικότητα, τη σεξουαλική επιθυμία, τη σεξουαλική λειτουργικότητα και τη σεξουαλική αλλά και ευρύτερη επικοινωνία. Στόχος της είναι η βελτίωση της ποιότητας της σεξουαλικής ζωής, η μείωση του άγχους που συχνά συνδέεται με τη σεξουαλική λειτουργία και η ενίσχυση της επικοινωνίας και της σύνδεσης μέσα στις σχέσεις. Μία από τις πιο αποτελεσματικές προσεγγίσεις στην αντιμετώπιση των σεξουαλικών δυσκολιών είναι η Γνωσιακή-Συμπεριφορική Θεραπεία (ΓΣΘ). Η προσέγγιση αυτή έχει αποδειχθεί αποτελεσματική σε ένα ευρύ φάσμα ψυχολογικών δυσκολιών και έχει συμβάλει σημαντικά στη διαμόρφωση θεραπευτικών στρατηγικών για πολλές σεξουαλικές δυσλειτουργίες. Συχνά οι σεξουαλικές δυσκολίες συνδέονται με άγχος, αρνητικές σκέψεις ή φόβους σχετικά με τη σεξουαλική επίδοση και την εικόνα του εαυτού. Μέσα από τη θεραπεία, τα άτομα μαθαίνουν να αναγνωρίζουν και να τροποποιούν αυτά τα μοτίβα σκέψης και συμπεριφοράς, μειώνοντας το άγχος και ενισχύοντας τη σεξουαλική λειτουργικότητα και την απόλαυση. Η ψυχοσεξουαλική θεραπεία είναι ιδιαίτερα αποτελεσματική σε περιπτώσεις ψυχογενών σεξουαλικών δυσλειτουργιών, δηλαδή όταν η δυσκολία σχετίζεται κυρίως με ψυχολογικούς παράγοντες όπως άγχος, άγχος απόδοσης, χαμηλή αυτοεκτίμηση ή δυσκολίες στη σχέση. Παράλληλα, μπορεί να συμβάλει σημαντικά και σε περιπτώσεις όπου υπάρχει οργανική αιτιολογία, λειτουργώντας συμπληρωματικά σε ιατρικές παρεμβάσεις και βοηθώντας το άτομο να διαχειριστεί το άγχος και τις ψυχολογικές επιπτώσεις της δυσκολίας.</p>
+                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το <a href="#about" onclick="closeServiceModal()" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητειού Νοσοκομείου</a> και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες. Η ψυχοσεξουαλική θεραπεία αποτελεί μια εξειδικευμένη μορφή ψυχοθεραπείας που βοηθά τα άτομα και τα ζευγάρια να κατανοήσουν και να αντιμετωπίσουν δυσκολίες που σχετίζονται με τη σεξουαλικότητα, τη σεξουαλική επιθυμία, τη σεξουαλική λειτουργικότητα και τη σεξουαλική αλλά και ευρύτερη επικοινωνία. Στόχος της είναι η βελτίωση της ποιότητας της σεξουαλικής ζωής, η μείωση του άγχους που συχνά συνδέεται με τη σεξουαλική λειτουργία και η ενίσχυση της επικοινωνίας και της σύνδεσης μέσα στις σχέσεις. Μία από τις πιο αποτελεσματικές προσεγγίσεις στην αντιμετώπιση των σεξουαλικών δυσκολιών είναι η Γνωσιακή-Συμπεριφορική Θεραπεία (ΓΣΘ). Η προσέγγιση αυτή έχει αποδειχθεί αποτελεσματική σε ένα ευρύ φάσμα ψυχολογικών δυσκολιών και έχει συμβάλει σημαντικά στη διαμόρφωση θεραπευτικών στρατηγικών για πολλές σεξουαλικές δυσλειτουργίες. Συχνά οι σεξουαλικές δυσκολίες συνδέονται με άγχος, αρνητικές σκέψεις ή φόβους σχετικά με τη σεξουαλική επίδοση και την εικόνα του εαυτού. Μέσα από τη θεραπεία, τα άτομα μαθαίνουν να αναγνωρίζουν και να τροποποιούν αυτά τα μοτίβα σκέψης και συμπεριφοράς, μειώνοντας το άγχος και ενισχύοντας τη σεξουαλική λειτουργικότητα και την απόλαυση. Η ψυχοσεξουαλική θεραπεία είναι ιδιαίτερα αποτελεσματική σε περιπτώσεις ψυχογενών σεξουαλικών δυσλειτουργιών, δηλαδή όταν η δυσκολία σχετίζεται κυρίως με ψυχολογικούς παράγοντες όπως άγχος, άγχος απόδοσης, χαμηλή αυτοεκτίμηση ή δυσκολίες στη σχέση. Παράλληλα, μπορεί να συμβάλει σημαντικά και σε περιπτώσεις όπου υπάρχει οργανική αιτιολογία, λειτουργώντας συμπληρωματικά σε ιατρικές παρεμβάσεις και βοηθώντας το άτομο να διαχειριστεί το άγχος και τις ψυχολογικές επιπτώσεις της δυσκολίας.</p>
                         <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Ποιοι μπορούν να απευθυνθούν για ψυχοσεξουαλική θεραπεία</p>
                         <p>Η ψυχοσεξουαλική θεραπεία απευθύνεται σε άτομα ή ζευγάρια που αντιμετωπίζουν δυσκολίες όπως:</p>
                         <ul class="list-disc pl-5 space-y-1 mb-4">
