@@ -9,6 +9,14 @@
     <meta name="author" content="Advon Media">
     <meta name="robots" content="index, follow">
     
+    <meta property="og:title" content="Εύα Λαμπρινού | Ψυχολόγος, Κλινική Σεξολόγος, Ψυχοθεραπεύτρια">
+    <meta property="og:description" content="Η Εύα Λαμπρινού είναι Ψυχολόγος, Πιστοποιημένη Κλινική Σεξολόγος και Ψυχοθεραπεύτρια (CBT, EMDR). Επιστημονικά τεκμηριωμένες παρεμβάσεις για την ψυχική υγεία.">
+    <meta property="og:image" content="https://github.com/agelmet/pap/blob/main/mindyouremotion_WEB_logo.png?raw=true">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://github.com/agelmet/pap/blob/main/mindyouremotion_WEB_logo.png?raw=true">
+    <meta itemprop="image" content="https://github.com/agelmet/pap/blob/main/mindyouremotion_WEB_logo.png?raw=true">
+    
     <link rel="icon" href="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbb46ddc8c75f49d6ab38.jpg" type="image/jpeg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +37,7 @@
                             beige: '#f1e7dd', 
                             main2: '#beb59f', 
                             main3: '#b8c3b8', 
-                            dark: '#5A3935',  
+                            dark: '#0b2421',  
                             accent: '#808366', 
                             text: '#424e3e',   
                             subtext: '#888a75' 
@@ -40,7 +48,7 @@
                         display: ['Syne', 'sans-serif'],
                     },
                     boxShadow: {
-                        'soft': '0 10px 30px -10px rgba(90, 57, 53, 0.15)',
+                        'soft': '0 10px 30px -10px rgba(11, 36, 33, 0.15)',
                         'floating': '0 0 20px rgba(0,0,0,0.1)'
                     },
                     animation: {
@@ -60,7 +68,7 @@
     <style>
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1efee; }
-        ::-webkit-scrollbar-thumb { background: #5A3935; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #0b2421; border-radius: 4px; }
         
         .no-accents { text-transform: uppercase; }
 
@@ -72,7 +80,7 @@
         .glass-nav {
             background: rgba(241, 239, 238, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(90, 57, 53, 0.1);
+            border-bottom: 1px solid rgba(11, 36, 33, 0.1);
         }
 
         #lightbox { transition: opacity 0.4s ease; backdrop-filter: blur(10px); }
@@ -82,11 +90,7 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Mobile specific adjustments */
         .hero-bg-img { object-position: center 8%; }
-        @media (max-width: 768px) {
-            .hero-bg-img { object-position: center top !important; }
-        }
     </style>
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -134,16 +138,17 @@
     </nav>
 
     <section class="relative min-h-screen flex flex-col justify-end lg:justify-center pt-24 lg:pt-0 overflow-hidden bg-brand-main2">
-        <div class="w-full h-[45vh] relative lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0">
-            <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/lamprinou-eua_01%20(1).jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:hidden hero-bg-img">
+        <div class="w-full h-[45vh] relative lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0 flex items-center justify-center bg-white lg:bg-transparent">
+            <img src="https://github.com/agelmet/pap/blob/main/mindyouremotion_WEB_logo.png?raw=true" alt="Λογότυπο Mind Your Emotion" class="w-2/3 h-auto object-contain lg:hidden drop-shadow-sm p-4">
+            
             <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover lg:object-[center_8%] hidden lg:block hero-bg-img">
             
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-main2 via-brand-main2/20 to-transparent lg:hidden"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-main2 via-transparent to-transparent lg:hidden"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-brand-main2 via-transparent to-transparent hidden lg:block"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid lg:grid-cols-2 mt-6 lg:mt-0 lg:my-auto pb-12 lg:pb-0">
-            <div class="animate-fade-in-up flex flex-col">
+            <div class="animate-fade-in-up flex flex-col lg:mt-32">
                 <h1 class="hidden lg:block text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 text-brand-dark">
                     Mind Your Emotion
                 </h1>
@@ -199,11 +204,8 @@
                 <h2 class="hidden lg:block text-5xl font-display font-bold text-brand-dark mb-6">Η Ψυχολόγος</h2>
 
                 <div class="bg-brand-beige p-6 md:p-10 rounded-3xl shadow-sm border border-brand-main2/50 mb-8 mt-4 lg:mt-0">
-                    <p class="text-brand-text text-lg leading-relaxed font-medium mb-6">
+                    <p class="text-brand-text text-lg leading-relaxed font-medium">
                         Γεια σας, είμαι η Εύα Λαμπρινού, Ψυχολόγος-Ψυχοθεραπεύτρια και Κλινική Σεξολόγος. Καθώς βρίσκεστε εδώ, αυτό να είναι ήδη ένα πρώτο βήμα προς μια νέα διαδρομή. Ένα βήμα πιο κοντά στην κατανόηση του εαυτού σας, στη δημιουργία πιο ουσιαστικών σχέσεων και στην καλλιέργεια μιας ζωής με μεγαλύτερη ισορροπία και νόημα. Πιο κοντά στη βελτίωση της επικοινωνίας με τους ανθρώπους που αγαπάτε, στην ενίσχυση της οικειότητας και της σεξουαλικής ζωής, στην ανακούφιση από το άγχος, την πίεση ή τις δυσκολίες που μπορεί να κουβαλάτε από παλαιότερες εμπειρίες. Η θεραπευτική διαδικασία προσφέρει έναν χώρο όπου μπορείτε να μιλήσετε ανοιχτά, να επεξεργαστείτε δύσκολα βιώματα και να ανακαλύψετε νέους τρόπους να σχετίζεστε με τον εαυτό σας και τους άλλους. Έναν χώρο που βασίζεται στον σεβασμό, την αποδοχή και την αυθεντική ανθρώπινη επαφή.
-                    </p>
-                    <p class="text-brand-accent font-bold text-xl lg:text-2xl font-display italic">
-                        Έναν ασφαλή χώρο κατανόησης, αποδοχής και αλλαγής.
                     </p>
                 </div>
                 
@@ -535,21 +537,21 @@
                 <p class="text-brand-text text-lg font-medium max-w-2xl mx-auto">τόσο για την ομάδα μας όσο και για τα άτομα που μας εμπιστεύονται</p>
             </div>
 
-            <div class="columns-1 md:columns-3 gap-6 space-y-6">
-                <button class="w-full break-inside-avoid rounded-2xl overflow-hidden group relative reveal shadow-md bg-white focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_045.jpg')" aria-label="Προβολή φωτογραφίας χώρου 1">
-                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_045.jpg" alt="Χώρος Γραφείου 1" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <button class="w-full aspect-[4/3] rounded-2xl overflow-hidden group relative reveal shadow-md bg-white focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_045.jpg')" aria-label="Προβολή φωτογραφίας χώρου 1">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_045.jpg" alt="Χώρος Γραφείου 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <i data-lucide="zoom-in" class="w-8 h-8 text-white drop-shadow-lg"></i>
                     </div>
                 </button>
-                <button class="w-full break-inside-avoid rounded-2xl overflow-hidden group relative reveal delay-100 shadow-md bg-white focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_047.jpg')" aria-label="Προβολή φωτογραφίας χώρου 2">
-                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_047.jpg" alt="Χώρος Γραφείου 2" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+                <button class="w-full aspect-[4/3] rounded-2xl overflow-hidden group relative reveal delay-100 shadow-md bg-white focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_047.jpg')" aria-label="Προβολή φωτογραφίας χώρου 2">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_047.jpg" alt="Χώρος Γραφείου 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <i data-lucide="zoom-in" class="w-8 h-8 text-white drop-shadow-lg"></i>
                     </div>
                 </button>
-                <button class="w-full break-inside-avoid rounded-2xl overflow-hidden group relative reveal delay-200 shadow-md bg-white focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_050.jpg')" aria-label="Προβολή φωτογραφίας χώρου 3">
-                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_050.jpg" alt="Χώρος Γραφείου 3" class="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700">
+                <button class="w-full aspect-[4/3] rounded-2xl overflow-hidden group relative reveal delay-200 shadow-md bg-white focus:outline-none focus:ring-4 focus:ring-brand-dark" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_050.jpg')" aria-label="Προβολή φωτογραφίας χώρου 3">
+                    <img src="https://raw.githubusercontent.com/agelmet/Image-hosting-/3c028f1787cece98c786422d7ca351585a637f25/241019_050.jpg" alt="Χώρος Γραφείου 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <i data-lucide="zoom-in" class="w-8 h-8 text-white drop-shadow-lg"></i>
                     </div>
@@ -849,7 +851,7 @@
                     title: "Ψυχοσεξουαλική Θεραπεία",
                     icon: "heart",
                     content: `
-                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το <a href="#about" onclick="closeServiceModal()" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητειού Νοσοκομείου</a> και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες. Η ψυχοσεξουαλική θεραπεία αποτελεί μια εξειδικευμένη μορφή ψυχοθεραπείας που βοηθά τα άτομα και τα ζευγάρια να κατανοήσουν και να αντιμετωπίσουν δυσκολίες που σχετίζονται με τη σεξουαλικότητα, τη σεξουαλική επιθυμία, τη σεξουαλική λειτουργικότητα και τη σεξουαλική αλλά και ευρύτερη επικοινωνία. Στόχος της είναι η βελτίωση της ποιότητας της σεξουαλικής ζωής, η μείωση του άγχους που συχνά συνδέεται με τη σεξουαλική λειτουργία και η ενίσχυση της επικοινωνίας και της σύνδεσης μέσα στις σχέσεις. Μία από τις πιο αποτελεσματικές προσεγγίσεις στην αντιμετώπιση των σεξουαλικών δυσκολιών είναι η Γνωσιακή-Συμπεριφορική Θεραπεία (ΓΣΘ). Η προσέγγιση αυτή έχει αποδειχθεί αποτελεσματική σε ένα ευρύ φάσμα ψυχολογικών δυσκολιών και έχει συμβάλει σημαντικά στη διαμόρφωση θεραπευτικών στρατηγικών για πολλές σεξουαλικές δυσλειτουργίες. Συχνά οι σεξουαλικές δυσκολίες συνδέονται με άγχος, αρνητικές σκέψεις ή φόβους σχετικά με τη σεξουαλική επίδοση και την εικόνα του εαυτού. Μέσα από τη θεραπεία, τα άτομα μαθαίνουν να αναγνωρίζουν και να τροποποιούν αυτά τα μοτίβα σκέψης και συμπεριφοράς, μειώνοντας το άγχος και ενισχύοντας τη σεξουαλική λειτουργικότητα και την απόλαυση. Η ψυχοσεξουαλική θεραπεία είναι ιδιαίτερα αποτελεσματική σε περιπτώσεις ψυχογενών σεξουαλικών δυσλειτουργιών, δηλαδή όταν η δυσκολία σχετίζεται κυρίως με ψυχολογικούς παράγοντες όπως άγχος, άγχος απόδοσης, χαμηλή αυτοεκτίμηση ή δυσκολίες στη σχέση. Παράλληλα, μπορεί να συμβάλει σημαντικά και σε περιπτώσεις όπου υπάρχει οργανική αιτιολογία, λειτουργώντας συμπληρωματικά σε ιατρικές παρεμβάσεις και βοηθώντας το άτομο να διαχειριστεί το άγχος και τις ψυχολογικές επιπτώσεις της δυσκολίας.</p>
+                        <p>Το 2023-2025 εκπαιδεύτηκα στην Ψυχοσεξουαλική Θεραπεία απο το Ερευνητικό Πανεπιστημιακό Ινστιτούτο Ψυχικής Υγείας του Αιγινητείου Νοσοκομείου και πιστοποιήθηκα ως Σεξολόγος κατόπιν γραπτών εξετάσεων απο την <a href="https://europeansexology.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Federation of Sexology</a> και την <a href="https://www.essm.org/" target="_blank" rel="noopener noreferrer" class="text-brand-accent font-bold underline hover:text-brand-dark transition-colors">European Society of Sexual Medicine</a>. Λαμβάνω τακτικά κλινική εποπτεία από πιστοποιημένη επόπτρια με στόχο την ψυχοσεξουαλική αξιολόγηση και υποστήριξη, βασισμένη σε σύγχρονες, επιστημονικά τεκμηριωμένες ευρωπαϊκές κατευθυντήριες οδηγίες. Η ψυχοσεξουαλική θεραπεία αποτελεί μια εξειδικευμένη μορφή ψυχοθεραπείας που βοηθά τα άτομα και τα ζευγάρια να κατανοήσουν και να αντιμετωπίσουν δυσκολίες που σχετίζονται με τη σεξουαλικότητα, τη σεξουαλική επιθυμία, τη σεξουαλική λειτουργικότητα και τη σεξουαλική αλλά και ευρύτερη επικοινωνία. Στόχος της είναι η βελτίωση της ποιότητας της σεξουαλικής ζωής, η μείωση του άγχους που συχνά συνδέεται με τη σεξουαλική λειτουργία και η ενίσχυση της επικοινωνίας και της σύνδεσης μέσα στις σχέσεις. Μία από τις πιο αποτελεσματικές προσεγγίσεις στην αντιμετώπιση των σεξουαλικών δυσκολιών είναι η Γνωσιακή-Συμπεριφορική Θεραπεία (ΓΣΘ). Η προσέγγιση αυτή έχει αποδειχθεί αποτελεσματική σε ένα ευρύ φάσμα ψυχολογικών δυσκολιών και έχει συμβάλει σημαντικά στη διαμόρφωση θεραπευτικών στρατηγικών για πολλές σεξουαλικές δυσλειτουργίες. Συχνά οι σεξουαλικές δυσκολίες συνδέονται με άγχος, αρνητικές σκέψεις ή φόβους σχετικά με τη σεξουαλική επίδοση και την εικόνα του εαυτού. Μέσα από τη θεραπεία, τα άτομα μαθαίνουν να αναγνωρίζουν και να τροποποιούν αυτά τα μοτίβα σκέψης και συμπεριφοράς, μειώνοντας το άγχος και ενισχύοντας τη σεξουαλική λειτουργικότητα και την απόλαυση. Η ψυχοσεξουαλική θεραπεία είναι ιδιαίτερα αποτελεσματική σε περιπτώσεις ψυχογενών σεξουαλικών δυσλειτουργιών, δηλαδή όταν η δυσκολία σχετίζεται κυρίως με ψυχολογικούς παράγοντες όπως άγχος, άγχος απόδοσης, χαμηλή αυτοεκτίμηση ή δυσκολίες στη σχέση. Παράλληλα, μπορεί να συμβάλει σημαντικά και σε περιπτώσεις όπου υπάρχει οργανική αιτιολογία, λειτουργώντας συμπληρωματικά σε ιατρικές παρεμβάσεις και βοηθώντας το άτομο να διαχειριστεί το άγχος και τις ψυχολογικές επιπτώσεις της δυσκολίας.</p>
                         <p class="font-bold text-brand-dark mt-6 mb-2 text-lg">Ποιοι μπορούν να απευθυνθούν για ψυχοσεξουαλική θεραπεία</p>
                         <p>Η ψυχοσεξουαλική θεραπεία απευθύνεται σε άτομα ή ζευγάρια που αντιμετωπίζουν δυσκολίες όπως:</p>
                         <ul class="list-disc pl-5 space-y-1 mb-4">
