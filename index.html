@@ -91,6 +91,9 @@
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
         .hero-bg-img { object-position: center 8%; }
+        @media (max-width: 768px) {
+            .hero-bg-img { object-position: center top !important; }
+        }
     </style>
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -140,7 +143,7 @@
     <section class="relative min-h-screen flex flex-col justify-end lg:justify-center pt-24 lg:pt-0 overflow-hidden bg-brand-main2">
         <div class="w-full h-[45vh] relative lg:absolute lg:inset-0 lg:w-1/2 lg:h-full lg:right-0 lg:left-auto z-0 shrink-0 flex items-center justify-center bg-white lg:bg-transparent">
             
-            <img src="https://github.com/agelmet/pap/blob/main/mindyouremotion_WEB_logo.png?raw=true" alt="Λογότυπο Mind Your Emotion" class="w-2/3 h-auto object-contain lg:hidden drop-shadow-sm p-4">
+            <img src="https://raw.githubusercontent.com/agelmet/LABRINOU/refs/heads/main/lamprinou-eua_01.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover object-top lg:hidden hero-bg-img">
             
             <img src="https://assets.cdn.filesafe.space/61icdoMiJ2pHklO6mmKW/media/69afbc1dbfc81f3ced382e8d.jpg" alt="Εύα Λαμπρινού Ψυχολόγος" class="w-full h-full object-cover lg:object-[center_8%] hidden lg:block hero-bg-img">
             
@@ -682,7 +685,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Initialize Lucide Icons
             lucide.createIcons();
 
             // Back to Top Button Logic
